@@ -1,0 +1,33 @@
+.question {
+   
+    border-radius: 5px;
+    border-width: 1px;
+    
+    color: hsl(206, 17%, 28%);
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 30px 40px;
+  }
+
+  #generate {
+      background-color: blueviolet;
+  }
+  .card {
+    background-color:peachpuff;
+    color:green;
+    
+    
+    
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 30px 40px;
+  }
+  .time {
+      float:right;
+      margin: 5px;
+  }
+  h1 {
+      text-align: center;
+  }

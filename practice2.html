@@ -1,0 +1,176 @@
+<script>
+    var timeEl = document.querySelector(".time");
+    var mainEl = document.getElementById("main");
+    
+    var secondsLeft = 100;
+    
+    function setTime() {
+      var timerInterval = setInterval(function() {
+        secondsLeft = secondsLeft - 2 ;
+        timeEl.textContent = secondsLeft + " seconds left";
+    
+        if(secondsLeft === 0) {
+          clearInterval(timerInterval);
+          sendMessage();
+        }
+    
+      }, 1000);
+    }
+    
+    function sendMessage() {
+      
+          timeEl.textContent = " Time's Up! ";
+    
+    }
+    
+    setTime();
+    
+    // choice of quesitons
+            
+    var currentQuestion = document.querySelector(".questionText");      
+    
+    // naming var for pointer 
+    
+    var btn1 = document.querySelector(".optionBtn1").innerHTML
+    var btn2 =  document.querySelector(".optionBtn2").innerHTML 
+    var btn3 = document.querySelector(".optionBtn3").innerHTML
+    var btn4 = document.querySelector(".optionBtn4").innerHTM
+    
+    document.querySelector(".questionText").innerHTML = question1.Qtitle
+    
+    // onclick function 
+    document.querySelector(".optionBtn1").onclick = function(){
+        console.log('Btn 1 success!')
+    if(currentQuestion.innerHTML == question1.Qtitle){
+      // alert if answer is right 
+        alert("correct!")
+        btn1.textContent = 'This text is different!';
+    }
+    else if(currentQuestion.innerHTML == question2.Qtitle){
+        alert("incorrect!")
+        btn1.textContent = 'This text is different!';
+    }
+    else if(currentQuestion.innerHTML == question3.Qtitle){
+        alert("incorrect!")
+        currentQuestion.innerHTML = question4.Qtitle
+        bbtn1.textContent = 'This text is different!';
+    }
+    else if(currentQuestion.innerHTML == question4.Qtitle){
+        alert("incorrect!")
+        alert("All done!")
+        window.location.href = './index.html'
+    }
+    }
+    
+    
+    document.querySelector(".optionBtn2").onclick = function(){
+        console.log('Btn 2 success!')
+        if(currentQuestion.innerHTML == question1.Qtitle){
+        alert("incorrect!")
+        currentQuestion.innerHTML = question2.Qtitle
+        document.querySelector(".optionBtn1").innerHTML = question2.optionA
+        document.querySelector(".optionBtn2").innerHTML = question2.optionB
+        document.querySelector(".optionBtn3").innerHTML = question2.optionC
+        document.querySelector(".optionBtn4").innerHTML = question2.optionD
+    }
+    else if(currentQuestion.innerHTML == question2.Qtitle){
+        alert("correct!")
+        currentQuestion.innerHTML = question3.Qtitle
+        document.querySelector(".optionBtn1").innerHTML = question3.optionA
+        document.querySelector(".optionBtn2").innerHTML = question3.optionB
+        document.querySelector(".optionBtn3").innerHTML = question3.optionC
+        document.querySelector(".optionBtn4").innerHTML = question3.optionD
+    }
+    else if(currentQuestion.innerHTML == question3.Qtitle){
+        alert("incorrect!")
+        currentQuestion.innerHTML = question4.Qtitle
+        document.querySelector(".optionBtn1").innerHTML = question4.optionA
+        document.querySelector(".optionBtn2").innerHTML = question4.optionB
+        document.querySelector(".optionBtn3").innerHTML = question4.optionC
+        document.querySelector(".optionBtn4").innerHTML = question4.optionD
+    }
+    else if(currentQuestion.innerHTML == question4.Qtitle){
+        alert("incorrect!")
+        alert("All done!")
+        window.location.href = './index.html'
+    }
+    }
+    
+    
+    
+    document.querySelector(".optionBtn3").onclick = function(){
+        console.log('Btn 3 success!')
+        if(currentQuestion.innerHTML == question1.Qtitle){
+        alert("incorrect!")
+        currentQuestion.innerHTML = question2.Qtitle
+        document.querySelector(".optionBtn1").innerHTML = question2.optionA
+        document.querySelector(".optionBtn2").innerHTML = question2.optionB
+        document.querySelector(".optionBtn3").innerHTML = question2.optionC
+        document.querySelector(".optionBtn4").innerHTML = question2.optionD
+    }
+    else if(currentQuestion.innerHTML == question2.Qtitle){
+        alert("incorrect!")
+        currentQuestion.innerHTML = question3.Qtitle
+        document.querySelector(".optionBtn1").innerHTML = question3.optionA
+        document.querySelector(".optionBtn2").innerHTML = question3.optionB
+        document.querySelector(".optionBtn3").innerHTML = question3.optionC
+        document.querySelector(".optionBtn4").innerHTML = question3.optionD
+    }
+    else if(currentQuestion.innerHTML == question3.Qtitle){
+        alert("correct!")
+        currentQuestion.innerHTML = question4.Qtitle
+        document.querySelector(".optionBtn1").innerHTML = question4.optionA
+        document.querySelector(".optionBtn2").innerHTML = question4.optionB
+        document.querySelector(".optionBtn3").innerHTML = question4.optionC
+        document.querySelector(".optionBtn4").innerHTML = question4.optionD
+    }
+    else if(currentQuestion.innerHTML == question4.Qtitle){
+        alert("incorrect!")
+        alert("All done!")
+        window.location.href = './index.html'
+    }
+    }
+    
+    
+    
+    document.querySelector(".optionBtn4").onclick = function(){
+        console.log('Btn 4 success!')
+    if(currentQuestion.innerHTML == question1.Qtitle){
+        alert("correct!")
+        currentQuestion.innerHTML = question2.Qtitle
+        document.querySelector(".optionBtn1").innerHTML = question2.optionA
+        document.querySelector(".optionBtn2").innerHTML = question2.optionB
+        document.querySelector(".optionBtn3").innerHTML = question2.optionC
+        document.querySelector(".optionBtn4").innerHTML = question2.optionD
+    }
+    else if(currentQuestion.innerHTML == question2.Qtitle){
+        alert("correct!")
+        currentQuestion.innerHTML = question3.Qtitle
+        document.querySelector(".optionBtn1").innerHTML = question3.optionA
+        document.querySelector(".optionBtn2").innerHTML = question3.optionB
+        document.querySelector(".optionBtn3").innerHTML = question3.optionC
+        document.querySelector(".optionBtn4").innerHTML = question3.optionD
+    }
+    else if(currentQuestion.innerHTML == question3.Qtitle){
+        alert("correct!")
+        currentQuestion.innerHTML = question4.Qtitle
+        document.querySelector(".optionBtn1").innerHTML = question4.optionA
+        document.querySelector(".optionBtn2").innerHTML = question4.optionB
+        document.querySelector(".optionBtn3").innerHTML = question4.optionC
+        document.querySelector(".optionBtn4").innerHTML = question4.optionD
+    }
+    else if(currentQuestion.innerHTML == question4.Qtitle){
+        alert("correct!")
+        alert("All done!")
+        window.location.href = './index.html'
+    }
+    }
+    
+    //  if correct next question
+    next question will be textContent replacement of  text title  btn 1 and 2 and 3 and 4 
+    
+    // if incorret next question, time go down by 10 
+    
+    
+    
+        </script>
