@@ -591,3 +591,118 @@ else if (currentQuestion === alltheQs.question3){
 }
 
 // allow user to add input and save that input 
+
+
+
+// fourth TRY T_T 
+var currentQuestion = document.querySelector(".questionText");  
+var btn1 = document.querySelector(".optionBtn1")
+var btn2 =  document.querySelector(".optionBtn2")
+var btn3 = document.querySelector(".optionBtn3")
+var btn4 = document.querySelector(".optionBtn4") 
+
+var allTheQs = [
+  questionOne: {
+    question: "This is the question?",
+    choiceOne: "This is a choice",
+    choiceTwo: "This is another choice",
+    choiceThree: "And another choice",
+    answer: "This is another choice"
+ },
+   questionTwo: {
+    question: "This is the question?",
+    choiceOne: "This is a choice",
+    choiceTwo: "This is another choice",
+    choiceThree: "And another choice",
+    answer: "This is a choice"
+  }
+]
+
+var currentQuestion = 0;
+
+allTheQs[currentQuestion].question
+
+var questionOne =function changeanswer1 (){
+  currentQuestion= alltheQs.question1
+  btn1.textContent = "as1a",
+  btn2.textContent = "as1b",
+  btn3.textContent = "as1c",
+  btn4.textContent = "as1d"
+}
+
+var q2=function changeanswer2() {
+  currentQuestion= alltheQs.question2
+  btn1.textContent = "as2a",
+  btn2.textContent = "as2b",
+  btn3.textContent = "as2c",
+  btn4.textContent = "as2d"
+
+}
+
+var q3= function changeanswer3 (){
+  currentQuestion= alltheQs.question3
+  btn1.textContent = "as3a",
+  btn2.textContent = "as3b",
+  btn3.textContent = "as3c",
+  btn4.textContent = "as3d"
+  
+}
+
+// // working on button 1 (answer A)
+// currentQuestion= alltheQs.question1
+// if (btn1.onclick === true) {
+//   console.log ("this is button 1")
+//   if(currentQuestion === alltheQs.question1){
+//     alert("correct!")
+//     currentQuestion = alltheQs.question2
+//     function changeanswer2 ()
+  
+// }
+
+currentQuestion= alltheQs.question1
+if(btn1.onclicked === true) {
+  alert("correct!")
+// and the next function happen here 
+function changeanswer2 ()
+}
+
+// if any other buttons that wasn't btn 1 was clicked, alert incorrect and go on with question 2
+else if (btn2.onclick){
+  alert("incorrect!")
+  function changeanswer2 ()
+}
+
+else if (btn3.onclick){
+alert("incorrect!")
+function changeanswer2 ()
+}
+
+else if (btn4.onclick){
+alert("incorrect!")
+function changeanswer2 ()
+}
+
+
+currentQuestion= alltheQs.question2
+if(btn1.onclicked) {
+  alert("incorrect!")
+// and the next function happen here 
+function changeanswer3 ()
+}
+
+
+// if any other buttons that wasn't btn 1 was clicked, alert incorrect and go on with question 2
+else if (btn2.onclick){
+  alert("correct!")
+  function changeanswer3 ()
+}
+
+else if (btn3.onclick){
+alert("incorrect!")
+function changeanswer3 ()
+}
+
+else if (btn4.onclick){
+alert("incorrect!")
+function changeanswer3 ()
+}
