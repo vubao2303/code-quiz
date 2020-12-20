@@ -42,7 +42,7 @@ if (currentQuestion= alltheQs.question1) {
   btn4.textContent = "as1d"
 }
 
-if (currentQuestion= alltheQs.question2) function changeanser2() {
+if (currentQuestion= alltheQs.question2) function changeanswer2() {
 
   btn1.textContent = "as2a",
   btn2.textContent = "as2b",
@@ -60,15 +60,64 @@ if (currentQuestion= alltheQs.question3) function changeanswer3 (){
   
 }
 
-// working on button 1 (answer A)
-currentQuestion= alltheQs.question1
-btn1.onclick = function() {
-  console.log ("this is button 1")
-  if(currentQuestion === alltheQs.question1){
-    alert("correct!")
-    currentQuestion = alltheQs.question2
+// // working on button 1 (answer A)
+// currentQuestion= alltheQs.question1
+// if (btn1.onclick === true) {
+//   console.log ("this is button 1")
+//   if(currentQuestion === alltheQs.question1){
+//     alert("correct!")
+//     currentQuestion = alltheQs.question2
+//     function changeanswer2 ()
   
+// }
+
+
+if(btn1.onclicked === true) {
+  alert("correct!")
+// and the next function happen here 
+function question2 (){
+currentQuestion.textContent= "this is Question 2?"
+btn1.textContent = "as2a"
+btn2.textContent = "as2b"
+btn3.textContent = "as2c"
+btn4.textContent = "as2d"}
 }
+
+// if any other buttons that wasn't btn 1 was clicked, alert incorrect and go on with question 2
+else if (btn2.onclick){
+  alert("incorrect!")
+  function question2 (){
+  currentQuestion.textContent= "this is Question 2?"
+  btn1.textContent = "as2a"
+  btn2.textContent = "as2b"
+  btn3.textContent = "as2c"
+  btn4.textContent = "as2d"}
+}
+else if (btn3.onclick){
+alert("incorrect!")
+function question2 (){
+currentQuestion.textContent= "this is Question 2?"
+btn1.textContent = "as2a"
+btn2.textContent = "as2b"
+btn3.textContent = "as2c"
+btn4.textContent = "as2d"}
+}
+else if (btn4.onclick){
+alert("incorrect!")
+function question2 (){
+currentQuestion.textContent= "this is Question 2?"
+btn1.textContent = "as2a"
+btn2.textContent = "as2b"
+btn3.textContent = "as2c"
+btn4.textContent = "as2d"}
+}
+var Qs = function question2 (){
+currentQuestion.textContent= "this is Question 2?"
+btn1.textContent = "as2a"
+btn2.textContent = "as2b"
+btn3.textContent = "as2c"
+btn4.textContent = "as2d"}
+
 
 else if(currentQuestion === alltheQs.question2){
   alert("incorrect!")
