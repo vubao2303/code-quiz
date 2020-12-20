@@ -25,119 +25,119 @@ function sendMessage() {
 setTime();
 
 
-// B idea number 1 
-// var currentQuestion = document.querySelector(".questionText");  
-// var btn1 = document.querySelector(".optionBtn1")
-// var btn2 =  document.querySelector(".optionBtn2")
-// var btn3 = document.querySelector(".optionBtn3")
-// var btn4 = document.querySelector(".optionBtn4") 
+B idea number 1 
+var currentQuestion = document.querySelector(".questionText");  
+var btn1 = document.querySelector(".optionBtn1")
+var btn2 =  document.querySelector(".optionBtn2")
+var btn3 = document.querySelector(".optionBtn3")
+var btn4 = document.querySelector(".optionBtn4") 
 
         
-//   // question 1 change the question text to question1 
+  // question 1 change the question text to question1 
 
-// currentQuestion.textContent= "this is Question 1?"
+currentQuestion.textContent= "this is Question 1?"
 
-//   // alert if answer is right right answer was A, button 1
+  // alert if answer is right right answer was A, button 1
 
-//   if(btn1.onclicked === true) {
-//     alert("correct!")
-// // and the next function happen here 
-// function question2 (){
-//   currentQuestion.textContent= "this is Question 2?"
-//   btn1.textContent = "as2a"
-//   btn2.textContent = "as2b"
-//   btn3.textContent = "as2c"
-//   btn4.textContent = "as2d"}
-// }
+  if(btn1.onclicked === true) {
+    alert("correct!")
+// and the next function happen here 
+function question2 (){
+  currentQuestion.textContent= "this is Question 2?"
+  btn1.textContent = "as2a"
+  btn2.textContent = "as2b"
+  btn3.textContent = "as2c"
+  btn4.textContent = "as2d"}
+}
 
-// // if any other buttons that wasn't btn 1 was clicked, alert incorrect and go on with question 2
-// else if (btn2.onclick){
-//     alert("incorrect!")
-//     function question2 (){
-//     currentQuestion.textContent= "this is Question 2?"
-//     btn1.textContent = "as2a"
-//     btn2.textContent = "as2b"
-//     btn3.textContent = "as2c"
-//     btn4.textContent = "as2d"}
-// }
-// else if (btn3.onclick){
-//   alert("incorrect!")
-//   function question2 (){
-//   currentQuestion.textContent= "this is Question 2?"
-//   btn1.textContent = "as2a"
-//   btn2.textContent = "as2b"
-//   btn3.textContent = "as2c"
-//   btn4.textContent = "as2d"}
-// }
-// else if (btn4.onclick){
-//   alert("incorrect!")
-//   function question2 (){
-//   currentQuestion.textContent= "this is Question 2?"
-//   btn1.textContent = "as2a"
-//   btn2.textContent = "as2b"
-//   btn3.textContent = "as2c"
-//   btn4.textContent = "as2d"}
-// }
-// var Qs = function question2 (){
-//   currentQuestion.textContent= "this is Question 2?"
-//   btn1.textContent = "as2a"
-//   btn2.textContent = "as2b"
-//   btn3.textContent = "as2c"
-//   btn4.textContent = "as2d"}
-
-
-
-// // question 2 
-// currentQuestion.textContent= "this is Question 2?"
-// // the right answer is B, so if btn2 is clicked, then alert correct
-//   if(btn2.onclicked === true) {
-//     alert("correct!")
-// // and the next function happen here 
-// function question3 (){
-//   currentQuestion.textContent= "this is Question 3?"
-//   btn1.textContent = "as3a"
-//   btn2.textContent = "as3b"
-//   btn3.textContent = "as3c"
-//   btn4.textContent = "as3d"}
-// }
-
-// // if any button other than btn2 was clicked, then its incorrect
-// else function question3(){
-//     alert("incorrect!")
-
-//     function question3 (){
-//     currentQuestion.textContent= "this is Question 3?"
-//     btn1.textContent = "as3a"
-//     btn2.textContent = "as3b"
-//     btn3.textContent = "as3c"
-//     btn4.textContent = "as3d"}
-// }
-// question3 ()
+// if any other buttons that wasn't btn 1 was clicked, alert incorrect and go on with question 2
+else if (btn2.onclick){
+    alert("incorrect!")
+    function question2 (){
+    currentQuestion.textContent= "this is Question 2?"
+    btn1.textContent = "as2a"
+    btn2.textContent = "as2b"
+    btn3.textContent = "as2c"
+    btn4.textContent = "as2d"}
+}
+else if (btn3.onclick){
+  alert("incorrect!")
+  function question2 (){
+  currentQuestion.textContent= "this is Question 2?"
+  btn1.textContent = "as2a"
+  btn2.textContent = "as2b"
+  btn3.textContent = "as2c"
+  btn4.textContent = "as2d"}
+}
+else if (btn4.onclick){
+  alert("incorrect!")
+  function question2 (){
+  currentQuestion.textContent= "this is Question 2?"
+  btn1.textContent = "as2a"
+  btn2.textContent = "as2b"
+  btn3.textContent = "as2c"
+  btn4.textContent = "as2d"}
+}
+var Qs = function question2 (){
+  currentQuestion.textContent= "this is Question 2?"
+  btn1.textContent = "as2a"
+  btn2.textContent = "as2b"
+  btn3.textContent = "as2c"
+  btn4.textContent = "as2d"}
 
 
-// // question 3
-// currentQuestion.textContent= "this is Question 3?"
-// // the right answer is B, so if btn2 is clicked, then alert correct
-//   if(btn3.onclicked === true) {
-//     alert("correct!")
-//   }
 
-// // if any button other than btn2 was clicked, then its incorrect
-// else function question3(){
-//     alert("incorrect!")
-// }
+// question 2 
+currentQuestion.textContent= "this is Question 2?"
+// the right answer is B, so if btn2 is clicked, then alert correct
+  if(btn2.onclicked === true) {
+    alert("correct!")
+// and the next function happen here 
+function question3 (){
+  currentQuestion.textContent= "this is Question 3?"
+  btn1.textContent = "as3a"
+  btn2.textContent = "as3b"
+  btn3.textContent = "as3c"
+  btn4.textContent = "as3d"}
+}
 
-// // B Idead number 2 
+// if any button other than btn2 was clicked, then its incorrect
+else function question3(){
+    alert("incorrect!")
 
-// btn1.addEventListener("click", function(event) {
-//   event.preventDefault();
-//   alert ("correct")
-//   currentQuestion.textContent= "this is Question 2?"
-//   btn1.textContent = "as2a"
-//   btn2.textContent = "as2b"
-//   btn3.textContent = "as2c"
-//   btn4.textContent = "as2d"
-// });
+    function question3 (){
+    currentQuestion.textContent= "this is Question 3?"
+    btn1.textContent = "as3a"
+    btn2.textContent = "as3b"
+    btn3.textContent = "as3c"
+    btn4.textContent = "as3d"}
+}
+question3 ()
+
+
+// question 3
+currentQuestion.textContent= "this is Question 3?"
+// the right answer is B, so if btn2 is clicked, then alert correct
+  if(btn3.onclicked === true) {
+    alert("correct!")
+  }
+
+// if any button other than btn2 was clicked, then its incorrect
+else function question3(){
+    alert("incorrect!")
+}
+
+// B Idead number 2 
+
+btn1.addEventListener("click", function(event) {
+  event.preventDefault();
+  alert ("correct")
+  currentQuestion.textContent= "this is Question 2?"
+  btn1.textContent = "as2a"
+  btn2.textContent = "as2b"
+  btn3.textContent = "as2c"
+  btn4.textContent = "as2d"
+});
 
 
 
@@ -486,47 +486,108 @@ else if (currentQuestion === alltheQs.question3){
 }
 }
 
-// // questions to fill in 
-// // question 1  correct 1
-// // "A box without hinges, key, or lid, yet golden treasure inside is hid."
-//     a. an egg 
-// // b. the Sun 
-// // c. the Moon
-// // d. a treasure box 
+// questions to fill in 
+// question 1  correct 1
+// "A box without hinges, key, or lid, yet golden treasure inside is hid."
+    a. an egg 
+// b. the Sun 
+// c. the Moon
+// d. a treasure box 
 
 
-// Quesion2  answer b
-// // This thing all things devours:
-// // Birds, beasts, trees, flowers;
-// // Gnaws iron, bites steel;
-// // Grinds hard stones to meal;
-// // Slays king, ruins town,
-// // And beats high mountain down.
-// a. a clock  b. time c. a stopwatch d. tree 
+Quesion2  answer b
+// This thing all things devours:
+// Birds, beasts, trees, flowers;
+// Gnaws iron, bites steel;
+// Grinds hard stones to meal;
+// Slays king, ruins town,
+// And beats high mountain down.
+a. a clock  b. time c. a stopwatch d. tree 
 
 
-// question3 answer C
-// Alive without breath,
-// As cold as death;
-// Never thirsty, ever drinking,
-// All in mail never clinking.
-// a.Leaves b. wind c. Fish d. water 
+question3 answer C
+Alive without breath,
+As cold as death;
+Never thirsty, ever drinking,
+All in mail never clinking.
+a.Leaves b. wind c. Fish d. water 
 
-// // question4 answer a 
-// What has roots as nobody sees,
-// Is taller than trees,
-// Up, up it goes,
-// And yet never grows?
-// a. A mountain b. a river c.an ocean d. a rock 
+// question4 answer a 
+What has roots as nobody sees,
+Is taller than trees,
+Up, up it goes,
+And yet never grows?
+a. A mountain b. a river c.an ocean d. a rock 
 
-// // question 5 anwer c
-// Thirty white horses on a red hill,
-// First they champ,
-// Then they stamp,
-// Then they stand still.
-// a. aspen trees b. herd of horses c. teeth d. cows 
+// question 5 anwer c
+Thirty white horses on a red hill,
+First they champ,
+Then they stamp,
+Then they stand still.
+a. aspen trees b. herd of horses c. teeth d. cows 
 
 
 
-// bonusquestion (score  dont get deducted) Where are all these riddles come from? 
-// a. Lord of the Ring b. the Hobbit c A Wizard of Earthsea d. Sorcerer to The Crown 
+bonusquestion (score  dont get deducted) Where are all these riddles come from? 
+a. Lord of the Ring b. the Hobbit c A Wizard of Earthsea d. Sorcerer to The Crown 
+
+
+// FOURTH TRY 
+
+// working on button 2 (answer B)
+currentQuestion= alltheQs.question2
+// correct answer B 
+btn2.onclick = function() {
+  console.log ("this is button 2")
+  if(currentQuestion === alltheQs.question1){
+    alert("incorrect!")
+    currentQuestion = alltheQs.question2
+}
+else if(currentQuestion === alltheQs.question2){
+  alert("correct!")
+  currentQuestion= alltheQs.question3
+}
+else if (currentQuestion === alltheQs.question3){ 
+  alert ("incorrect!")
+  // pop out a card for high score here 
+}
+}
+
+// working on button 3 (answer C)
+currentQuestion= alltheQs.question3
+// correct answer C
+btn3.onclick = function() {
+  console.log ("this is button 3")
+  if(currentQuestion === alltheQs.question1){
+    alert("icorrect!")
+    currentQuestion = alltheQs.question2
+}
+else if(currentQuestion === alltheQs.question2){
+  alert("incorrect!")
+  currentQuestion= alltheQs.question3
+}
+else if (currentQuestion === alltheQs.question3){ 
+  alert ("correct!")
+  // pop out a card for high score here 
+}
+}
+
+// working on button 4 (answer D)
+
+btn4.onclick = function() {
+  console.log ("this is button 4")
+  if(currentQuestion === alltheQs.question1){
+    alert("icorrect!")
+    currentQuestion = alltheQs.question2
+}
+else if(currentQuestion === alltheQs.question2){
+  alert("incorrect!")
+  currentQuestion= alltheQs.question3
+}
+else if (currentQuestion === alltheQs.question3){ 
+  alert ("incorrect!")
+  // pop out a card for high score here 
+}
+}
+
+// allow user to add input and save that input 
