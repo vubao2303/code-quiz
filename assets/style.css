@@ -18,3 +18,12 @@ button {
 .card{
     word-wrap: break-word;
   }
+
+.readybtn {
+    margin-left: 2rem;
+    font-size: 20px;
+}
+#ready {
+    text-align: center;
+    margin-left: 350px;margin-right:350px; 
+}

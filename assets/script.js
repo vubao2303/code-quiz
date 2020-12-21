@@ -26,11 +26,11 @@ setTime();
 // Working with questions 
 // name var for an object that has all the question value 
 var alltheQs = {
-  question1: "this is q1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
-  question2: "this is q2",
-  question3: "this is q3",
-  question4: "this is q4"
-  }
+  question1: "A box without hinges, key, or lid, yet golden treasure inside is hid.",
+  question2: "This thing all things devours.Birds, beasts, trees, flowers.Gnaws iron, bites steel; Grinds hard stones to meal;Slays king, ruins town,And beats high mountain down.",
+  question3: "Alive without breath.As cold as death.Never thirsty, ever drinking.All in mail never clinking.",
+  question4: "What has roots as nobody sees.Is taller than trees. Up, up it goes.And yet never grows?"
+  }  
 
 // name var that point to answer input 
 var btn1 = document.querySelector(".optionBtn1")
@@ -40,31 +40,38 @@ var btn4 = document.querySelector(".optionBtn4")
 var currentQuestion = document.querySelector(".questionText");   
 var result =document.querySelector(".card-footer")
 
+var currentQuestion= alltheQs.question1
+var q = document.getElementById("question_title")
+q.innerHTML = currentQuestion
+console.log(q)
+
+
+
 var changeq2= function changeanswer2() {
-  btn1.textContent = "as2a";
-btn2.textContent = "as2b";
-btn3.textContent = "as2c";
-btn4.textContent = "as2d";
-}
+  q.innerHTML= alltheQs.question2 
+  btn1.textContent = "A Clock";
+  btn2.textContent = "Time";
+  btn3.textContent = "A Stopwatch";
+  btn4.textContent = "A Knife";
+  }
   var changeq3= function changeanswer3 () {
-    btn1.textContent = "as3a",
-    btn2.textContent = "as3b",
-    btn3.textContent = "as3c",
-    btn4.textContent = "as3d"
+    q.innerHTML= alltheQs.question3
+    btn1.textContent = "Mountain",
+    btn2.textContent = "River",
+    btn3.textContent = "Ocean",
+    btn4.textContent = "Fish"
   }
 
 var changeq4 = function changeanswer4 () {
-btn1.textContent = "as4a",
-btn2.textContent = "as4b",
-btn3.textContent = "as4c",
-btn4.textContent = "as4d"
+q.innerHTML= alltheQs.question4
+btn1.textContent = "The Night King's Army",
+  btn2.textContent = "flock of doves",
+  btn3.textContent = "teeth",
+  btn4.textContent = "cows"
+  }
 
-}
 
-var currentQuestion= alltheQs.question1
-var q = document.getElementById("question-title")
-q.innerHTML = currentQuestion
-console.log(q)
+
 // working with button 1 
 // btn1.addEventListener("click", function () {
 //   changeq2();
@@ -72,23 +79,25 @@ console.log(q)
 
 btn1.addEventListener("click", function (){
   console.log('button1 A is the correct answer')
+  result.textContent = "correct"
 if(currentQuestion == alltheQs.question1){
   currentQuestion= alltheQs.question2
   changeq2 ()
+  
 }
 else if(currentQuestion== alltheQs.question2){
-  alert("incorrect!")
+  result.textContent = "incorrect"
   currentQuestion= alltheQs.question3
   changeq3 ()
 }
 else if(currentQuestion==  alltheQs.question3){
-  alert("incorrect!")
+  result.textContent = "correct"
   currentQuestion=  alltheQs.question4
   changeq4 ()
 }
 else if(currentQuestion==  alltheQs.question4){
-  alert("incorrect!")
-  alert("All done!")
+  result.textContent = "incorrect"
+  // alert("All done!")
   window.location.href = './index.html'
 }
 });
@@ -98,23 +107,23 @@ btn2.addEventListener("click", function (){
   console.log('button2 B is the correct answer')
   
   if(currentQuestion== alltheQs.question1){
-  alert("incorrect!")
+    result.textContent = "incorrect"
   currentQuestion= alltheQs.question2
   changeq2 ()
 }
 else if(currentQuestion== alltheQs.question2){
-  alert("correct!")
+  result.textContent = "correct"
   currentQuestion=  alltheQs.question3
   changeq3 ()
 }
 else if(currentQuestion==  alltheQs.question3){
-  alert("incorrect!")
+  result.textContent = "incorrect"
   currentQuestion=  alltheQs.question4
   changeq4 ()
 }
 else if(currentQuestion== alltheQs.question4){
-  alert("incorrect!")
-  alert("All done!")
+  result.textContent = "incorrect"
+  // alert("All done!")
   window.location.href = './index.html'
 }
 });
@@ -124,24 +133,24 @@ else if(currentQuestion== alltheQs.question4){
 btn3.addEventListener("click", function (){
   console.log('button3 C is the correct answer')
   if(currentQuestion== alltheQs.question1){
-  alert("incorrect!")
+    result.textContent = "incorrect"
   currentQuestion=alltheQs.question2
   changeq2 ()
   
 }
 else if(currentQuestion == alltheQs.question2){
-  alert("incorrect!")
+  result.textContent = "incorrect"
   currentQuestion= alltheQs.question3
   changeq3 ()
 }
 else if(currentQuestion ==  alltheQs.question3){
-  alert("correct!")
+  result.textContent = "correct"
   currentQuestion =  alltheQs.question4
   changeq4 ()
 }
 else if(currentQuestion ==  alltheQs.question4){
-  alert("incorrect!")
-  alert("All done!")
+  result.textContent = "incorrect"
+  // alert("All done!")
   window.location.href = './index.html'
 }
 });
@@ -150,23 +159,23 @@ else if(currentQuestion ==  alltheQs.question4){
 btn4.addEventListener("click", function (){
   console.log('btn 4 D is the correct answer')
 if(currentQuestion== alltheQs.question1){
-  alert('button4 D is the correct answer')
+  result.textContent = "incorrect"
   currentQuestion= alltheQs.question2
   changeq2 ()
 }
 else if(currentQuestion == alltheQs.question2){
-  alert("correct!")
+  result.textContent = "incorrect"
   currentQuestion =  alltheQs.question3
   changeq3 ()
 }
 else if(currentQuestion ==  alltheQs.question3){
-  alert("correct!")
+  result.textContent = "correct"
   currentQuestion = alltheQs.question4
   changeq4 ()
 }
 else if(currentQuestion==  alltheQs.question4){
-  alert("correct!")
-  alert("All done!")
+  result.textContent = "incorrect"
+  // alert("All done!")
   window.location.href = './index.html'
 }
 });
@@ -191,3 +200,8 @@ submitEl.addEventListener("click", function(event) {
   var savescoresss = nameInput.value + " "+ emailInput.value;
   savescore = savescoresss;
 });
+
+//deduct point 
+var incorrectAnswer = function() {
+  secondsLeft = secondsLeft - 10
+  }

@@ -1370,10 +1370,11 @@ btn4.addEventListener("click", function () {
 // TO USEEEEEEEEEE FOOOOOORRRRRRRRRRRR QQQQQQQEUUUUUUSSSSSTTTTTTTIOOOOOOOOOOOONNNNNNNNNNN
 var alltheQs = {
   question1: "A box without hinges, key, or lid, yet golden treasure inside is hid.",
-  question2: "This thing all things devours.Birds, beasts, trees, flowers.Gnaws iron, bites steel; Grinds hard stones to meal;Slays king, ruins town,And beats high mountain down.",
+ question2: "This thing all things devours.Birds, beasts, trees, flowers.Gnaws iron, bites steel; Grinds hard stones to meal;Slays king, ruins town,And beats high mountain down.",
   question3: "Alive without breath.As cold as death.Never thirsty, ever drinking.All in mail never clinking.",
   question4: "What has roots as nobody sees.Is taller than trees. Up, up it goes.And yet never grows?"
-  }
+  }  
+ 
 
 // name var that point to answer input 
 var btn1 = document.querySelector(".optionBtn1")
@@ -1409,4 +1410,3 @@ var changeq1 = function changeanswer1 () {
   btn3.textContent = "teeth",
   btn4.textContent = "cows"
   }
-  
