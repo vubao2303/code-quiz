@@ -14,6 +14,27 @@ SO THAT I can gauge my progress compared to my peers
 
 ```
 GIVEN I am taking a code quiz
+* Create a html file, a css file, and a javascript file
+* In HTML file 
+<ul> 
+<li> create nav bar with title and a clock on top of the page 
+<li>create a page with quiz rules and a start button </li>
+<li>create a page with question and answer choices </li>
+<li>create a page that allow name and high score  input </li>
+<li>create a page that save highscore record </li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+
 WHEN I click the start button
 THEN a timer starts and I am presented with a question
 WHEN I answer a question

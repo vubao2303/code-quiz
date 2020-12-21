@@ -1,12 +1,11 @@
+// set timer here! 
 var timeEl = document.querySelector(".time");
-var mainEl = document.getElementById("main");
-
 var secondsLeft = 100;
 
 function setTime() {
   var timerInterval = setInterval(function() {
     secondsLeft = secondsLeft - 1 ;
-    timeEl.textContent = secondsLeft + " seconds left";
+    timeEl.textContent = "Time: " + secondsLeft;
 
     if(secondsLeft === 0) {
       clearInterval(timerInterval);
@@ -19,173 +18,216 @@ function sendMessage() {
 }
 setTime();
 
-// fifth try 
-// pointers for question and buttons 
-var currentQuestion = document.querySelector(".questionText");  
+// questions to fill in 
+// // question 1  correct 1
+// // "A box without hinges, key, or lid, yet golden treasure inside is hid."
+//     a. an egg 
+// // b. the Sun 
+// // c. the Moon
+// // d. a treasure box 
+
+
+// Quesion2  answer b
+// // This thing all things devours:
+// // Birds, beasts, trees, flowers;
+// // Gnaws iron, bites steel;
+// // Grinds hard stones to meal;
+// // Slays king, ruins town,
+// // And beats high mountain down.
+// a. a clock  b. time c. a stopwatch d. tree 
+
+
+// question3 answer C
+// Alive without breath,
+// As cold as death;
+// Never thirsty, ever drinking,
+// All in mail never clinking.
+// a.Leaves b. wind c. Fish d. water 
+
+// // question4 answer a 
+// What has roots as nobody sees,
+// Is taller than trees,
+// Up, up it goes,
+// And yet never grows?
+// a. A mountain b. a river c.an ocean d. a rock 
+
+// // question 5 anwer c
+// Thirty white horses on a red hill,
+// First they champ,
+// Then they stamp,
+// Then they stand still.
+// a. aspen trees b. herd of horses c. teeth d. cows 
+
+
+
+// bonusquestion (score  dont get deducted) Where are all these riddles come from? 
+// a. Lord of the Ring b. the Hobbit c A Wizard of Earthsea d. Sorcerer to The Crown 
+
+
+// Working with questions 
+// name var for an object that has all the question value 
+var alltheQs = {
+  question1: "this is q1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+  question2: "this is q2",
+  question3: "this is q3",
+  question4: "this is q4"
+  }
+
+// name var that point to answer input 
 var btn1 = document.querySelector(".optionBtn1")
 var btn2 =  document.querySelector(".optionBtn2")
 var btn3 = document.querySelector(".optionBtn3")
-var btn4 = document.querySelector(".optionBtn4")
-// create an objects to contain all the questions and answer values 
+var btn4 = document.querySelector(".optionBtn4") 
+var currentQuestion = document.querySelector(".questionText");   
+var result =document.querySelector(".card-footer")
 
-var allTheQs = [
-  {question: "this is q1",
-    as1: "as1a",
-    as2: "as1b",
-    as3: "as1c",
-    as4: "as1d"
-  }, 
-{
-  question: "this is q2",
-    as1: "as2a",
-    as2: "as2b",
-    as3: "as2c",
-    as4: "as2d"
-},
-{
-  question: "this is q3",
-    as1: "as3a",
-    as2: "as3b",
-    as3: "as3c",
-    as4: "as3d"
+var changeq2= function changeanswer2() {
+  btn1.textContent = "as2a";
+btn2.textContent = "as2b";
+btn3.textContent = "as2c";
+btn4.textContent = "as2d";
 }
-]
-
-var currentQuestion = 0
-
-// for question 1 
-allTheQs[currentQuestion].question= "this is q1"
-if(btn1.onclicked === true) {
-  alert("correct!")
-// and the next function happen here 
-function changeanswer2 ()
-{
-  currentQuestion= alltheQs.question2
-  btn1.textContent = "as2a",
-  btn2.textContent = "as2b",
-  btn3.textContent = "as2c",
-  btn4.textContent = "as2d"
-
-}
-}
-
-// if any other buttons that wasn't btn 1 was clicked, alert incorrect and go on with question 2
-else if (btn2.onclick){
-  alert("incorrect!")
-  function changeanswer2 ()
-  {
-    currentQuestion= alltheQs.question2
-    btn1.textContent = "as2a",
-    btn2.textContent = "as2b",
-    btn3.textContent = "as2c",
-    btn4.textContent = "as2d"
-  
-  }
-}
-
-else if (btn3.onclick){
-alert("incorrect!")
-function changeanswer2 ()
-{
-  currentQuestion= alltheQs.question2
-  btn1.textContent = "as2a",
-  btn2.textContent = "as2b",
-  btn3.textContent = "as2c",
-  btn4.textContent = "as2d"
-
-}
-}
-
-else if (btn4.onclick){
-alert("incorrect!")
-function changeanswer2 ()
-{
-  currentQuestion= alltheQs.question2
-  btn1.textContent = "as2a",
-  btn2.textContent = "as2b",
-  btn3.textContent = "as2c",
-  btn4.textContent = "as2d"
-
-}
-}
-
-// for question 2 
-allTheQs[currentQuestion].question= "this is q2"
-if(btn1.onclicked) {
-  alert("incorrect!")
-// and the next function happen here 
-function changeanswer3 ()
-{
-  currentQuestion= alltheQs.question3
-  btn1.textContent = "as3a",
-  btn2.textContent = "as3b",
-  btn3.textContent = "as3c",
-  btn4.textContent = "as3d"
-  
-}
-}
-
-
-// if any other buttons that wasn't btn 1 was clicked, alert incorrect and go on with question 2
-else if (btn2.onclick){
-  alert("correct!")
-  function changeanswer3 ()
-  {
-    currentQuestion= alltheQs.question3
+  var changeq3= function changeanswer3 () {
     btn1.textContent = "as3a",
     btn2.textContent = "as3b",
     btn3.textContent = "as3c",
     btn4.textContent = "as3d"
-    
   }
+
+var changeq4 = function changeanswer4 () {
+btn1.textContent = "as4a",
+btn2.textContent = "as4b",
+btn3.textContent = "as4c",
+btn4.textContent = "as4d"
+
 }
 
-else if (btn3.onclick){
-alert("incorrect!")
-function changeanswer3 ()
-{
-  currentQuestion= alltheQs.question3
-  btn1.textContent = "as3a",
-  btn2.textContent = "as3b",
-  btn3.textContent = "as3c",
-  btn4.textContent = "as3d"
+document.querySelector(".questionText").innerHTML = alltheQs.question1
+
+// working with button 1 
+// btn1.addEventListener("click", function () {
+//   changeq2();
+// });
+
+btn1.addEventListener("click", function () {result.textContent ="correct"});
+
+btn1.onclick = function(){
+  console.log('button1 A is the correct answer')
+if(currentQuestion.innerHTML == alltheQs.question1){
+  currentQuestion.innerHTML = alltheQs.question2
+  changeq2 ()
+}
+else if(currentQuestion.innerHTML == alltheQs.question2){
+  alert("incorrect!")
+  currentQuestion.innerHTML = alltheQs.question3
+  changeq3 ()
+}
+else if(currentQuestion.innerHTML ==  alltheQs.question3){
+  alert("incorrect!")
+  currentQuestion.innerHTML =  alltheQs.question4
+  changeq4 ()
+}
+else if(currentQuestion.innerHTML ==  alltheQs.question4){
+  alert("incorrect!")
+  alert("All done!")
+  window.location.href = './index.html'
+}
+}
+
+// working on button 2
+btn2.onclick = function(){
+  console.log('button2 B is the correct answer')
+  if(currentQuestion.innerHTML == alltheQs.question1){
+  alert("incorrect!")
+  currentQuestion.innerHTML = alltheQs.question2
+  changeq2 ()
+}
+else if(currentQuestion.innerHTML == alltheQs.question2){
+  alert("correct!")
+  currentQuestion.innerHTML =  alltheQs.question3
+  changeq3 ()
+}
+else if(currentQuestion.innerHTML ==  alltheQs.question3){
+  alert("incorrect!")
+  currentQuestion.innerHTML =  alltheQs.question4
+  changeq4 ()
+}
+else if(currentQuestion.innerHTML == alltheQs.question4){
+  alert("incorrect!")
+  alert("All done!")
+  window.location.href = './index.html'
+}
+}
+
+
+// working with button 3
+bt3.onclick = function(){
+  console.log('button3 C is the correct answer')
+  if(currentQuestion.innerHTML == alltheQs.question1){
+  alert("incorrect!")
+  currentQuestion.innerHTML =alltheQs.question2
+  changeq2 ()
   
 }
+else if(currentQuestion.innerHTML == alltheQs.question2){
+  alert("incorrect!")
+  currentQuestion.innerHTML = alltheQs.question3
+  changeq3 ()
+}
+else if(currentQuestion.innerHTML ==  alltheQs.question3){
+  alert("correct!")
+  currentQuestion.innerHTML =  alltheQs.question4
+  changeq4 ()
+}
+else if(currentQuestion.innerHTML ==  alltheQs.question4){
+  alert("incorrect!")
+  alert("All done!")
+  window.location.href = './index.html'
+}
 }
 
-else if (btn4.onclick){
-alert("incorrect!")
-function changeanswer3 ()
-{
-  currentQuestion= alltheQs.question3
-  btn1.textContent = "as3a",
-  btn2.textContent = "as3b",
-  btn3.textContent = "as3c",
-  btn4.textContent = "as3d"
+// working with button 4
+btn4.onclick = function(){
+  console.log('btn 4 D is the correct answer')
+if(currentQuestion.innerHTML == alltheQs.question1){
+  alert('button4 D is the correct answer')
+  currentQuestion.innerHTML = alltheQs.question2
+  changeq2 ()
+}
+else if(currentQuestion.innerHTML == alltheQs.question2){
+  alert("correct!")
+  currentQuestion.innerHTML =  alltheQs.question3
+  changeq3 ()
+}
+else if(currentQuestion.innerHTML ==  alltheQs.question3){
+  alert("correct!")
+  currentQuestion.innerHTML = alltheQs.question4
+  changeq4 ()
+}
+else if(currentQuestion.innerHTML ==  alltheQs.question4){
+  alert("correct!")
+  alert("All done!")
+  window.location.href = './index.html'
+}
+}
+
+// save name and new high score
+
+function othername() {
+  var input = document.getElementById("userInput").value;
+  alert(input);
+}
+
+var submitEl = document.querySelector("#submit");
+var nameInput = document.querySelector("#name");
+var emailInput = document.querySelector("#score");
+var savescore = document.querySelector("#response");
+
+submitEl.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  console.log(event);
   
-}
-}
-
-// for question 3
-allTheQs[currentQuestion].question= "this is q3"
-if(btn1.onclicked) {
-  alert("incorrect!")
-// add the high score card 
-}
-
-
-// if any other buttons that wasn't btn 1 was clicked, alert incorrect and go on with question 2
-else if (btn2.onclick){
-  alert("incorrect!")
-  // add the high score card 
-  }
-
-else if (btn3.onclick){
-alert("correct!")
-// add the high score card 
-}
-
-else if (btn4.onclick){
-  alert("incorrect!")
-  // add the high score card 
-  }
+  var savescoresss = nameInput.value + " "+ emailInput.value;
+  savescore = savescoresss;
+});

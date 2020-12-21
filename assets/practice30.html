@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="row">
+                <div class="column">
+                    High Scores
+                </div>
+                <div class="column - 9">
+
+                </div>
+                <div class="column">
+                    <h3>
+                        Time Left:
+                    </h3>
+                    <p class="seconds">
+
+                    </p>
+                </div>
+            </div>
+        </nav>
+    </header>
+   <main>
+    <h2 class="questionText" id="question_title ">
+        
+    </h2>
+        <ol>
+            <li>
+                    <button class="optionBtn1" id="optonBtn1">
+                        Javascript
+                </button>
+            </li>
+            <li>
+                    <button class="optionBtn2" id="optonBtn2">
+                        Html
+                </button>
+            </li>
+            <li>
+                    <button class="optionBtn3" id="optonBtn3">
+                        css
+                </button>
+            </li>
+            <li>
+                    <button class="optionBtn4" id="optonBtn4">
+                        All of the above
+                </button>
+            </li>
+        </ol>
+    </main>
+    <script>
+        var question1 = {
+                Qtitle: "What language is this page using for logic?",
+                optionA: "A",
+                optionB: "B",
+                optionC: "C",
+                optionD: "D",
+                correctAnswer: "A"
+        }
+
+       var question2 = {
+            Qtitle: "What language is used for styling web pages?",
+                optionA: "Apple",
+                optionB: "CSS",
+                optionC: "Bootstrap",
+                optionD: "Druple",
+                correctAnswer: "B"
+        }
+
+      var question3 = {
+        Qtitle: "What markup language acts as the framework for a web page?",
+                optionA: "php",
+                optionB: "Jaba da javitty boop",
+                optionC: "HTML",
+                optionD: "Japanese",
+                correctAnswer: "C"
+       }
+    
+      var question4 = {
+        Qtitle: "Which of these is a scripting language?",
+                optionA: "html",
+                optionB: "css",
+                optionC: "machine code",
+                optionD: "javascript",
+                correctAnswer: "D"
+       }
+
+var btn1 = document.querySelector(".optionBtn1")
+var btn2 =  document.querySelector(".optionBtn2")
+var btn3 = document.querySelector(".optionBtn3")
+var btn4 = document.querySelector(".optionBtn4") 
+var currentQuestion = document.querySelector(".questionText");   
+
+var changeq2= function changeanswer2() {
+    btn1.innerHTML = question2.optionA
+    btn2.innerHTML = question2.optionB
+    btn3.innerHTML = question2.optionC
+    bnt4.innerHTML = question2.optionD
+}
+
+var changeq2 = function () {
+    btn1.textContent = "as2a";
+    btn2.textContent = "as2b";
+    btn3.textContent = "as2c";
+    btn4.textContent = "as2d";
+};
+
+btn1.addEventListener("click", function () {
+    changeq2();
+});
+
+btn2.addEventListener("click", function () {
+    changeq2();
+});
+btn3.addEventListener("click", function () {
+    changeq2();
+});
+
+btn4.addEventListener("click", function () {
+    changeq2();
+});
+
+
+
+
+document.querySelector(".questionText").innerHTML = question1.Qtitle
+
+// working with button 1 
+document.querySelector(".optionBtn1").onclick = function(){
+    console.log('Btn 1 success!')
+if(currentQuestion.innerHTML == question1.Qtitle){
+    alert("correct!")
+    currentQuestion.innerHTML = question2.Qtitle
+    changeq2 ()
+}
+else if(currentQuestion.innerHTML == question2.Qtitle){
+    alert("incorrect!")
+    currentQuestion.innerHTML = question3.Qtitle
+    btn1.innerHTML = question3.optionA
+    bnt2.innerHTML = question3.optionB
+    bnt3.innerHTML = question3.optionC
+    bnt4.innerHTML = question3.optionD
+}
+else if(currentQuestion.innerHTML == question3.Qtitle){
+    alert("incorrect!")
+    currentQuestion.innerHTML = question4.Qtitle
+    btn1.innerHTML = question4.optionA
+    bnt2.innerHTML = question4.optionB
+    bnt3.innerHTML = question4.optionC
+   bnt4.innerHTML = question4.optionD
+}
+else if(currentQuestion.innerHTML == question4.Qtitle){
+    alert("incorrect!")
+    alert("All done!")
+    window.location.href = './index.html'
+}
+}
+
+// working on button 2
+document.querySelector(".optionBtn2").onclick = function(){
+    console.log('Btn 2 success!')
+    if(currentQuestion.innerHTML == question1.Qtitle){
+    alert("incorrect!")
+    currentQuestion.innerHTML = question2.Qtitle
+    btn1.innerHTML = question2.optionA
+    bnt2.innerHTML = question2.optionB
+    bnt3.innerHTML = question2.optionC
+    bnt4.innerHTML = question2.optionD
+}
+else if(currentQuestion.innerHTML == question2.Qtitle){
+    alert("correct!")
+    currentQuestion.innerHTML = question3.Qtitle
+    btn1.innerHTML = question3.optionA
+    bnt2.innerHTML = question3.optionB
+    bnt3.innerHTML = question3.optionC
+    bnt4.innerHTML = question3.optionD
+}
+else if(currentQuestion.innerHTML == question3.Qtitle){
+    alert("incorrect!")
+    currentQuestion.innerHTML = question4.Qtitle
+    btn1.innerHTML = question4.optionA
+    bnt2.innerHTML = question4.optionB
+    bnt3. innerHTML= question4.optionC
+    bnt4.innerHTML = question4.optionD
+}
+else if(currentQuestion.innerHTML == question4.Qtitle){
+    alert("incorrect!")
+    alert("All done!")
+    window.location.href = './index.html'
+}
+}
+
+
+// working with button 3
+document.querySelector(".optionBtn3").onclick = function(){
+    console.log('Btn 3 success!')
+    if(currentQuestion.innerHTML == question1.Qtitle){
+    alert("incorrect!")
+    currentQuestion.innerHTML = question2.Qtitle
+    btn1.innerHTML = question2.optionA
+    bt2.innerHTML = question2.optionB
+   bnt3.innerHTML = question2.optionC
+    bnt4.innerHTML = question2.optionD
+}
+else if(currentQuestion.innerHTML == question2.Qtitle){
+    alert("incorrect!")
+    currentQuestion.innerHTML = question3.Qtitle
+    btn1.innerHTML = question3.optionA
+    bnt2.innerHTML = question3.optionB
+   bnt3.innerHTML = question3.optionC
+    bnt4.innerHTML = question3.optionD
+}
+else if(currentQuestion.innerHTML == question3.Qtitle){
+    alert("correct!")
+    currentQuestion.innerHTML = question4.Qtitle
+   btn1.innerHTML = question4.optionA
+    bnt2.innerHTML = question4.optionB
+    bnt3.innerHTML = question4.optionC
+    bnt4.innerHTML = question4.optionD
+}
+else if(currentQuestion.innerHTML == question4.Qtitle){
+    alert("incorrect!")
+    alert("All done!")
+    window.location.href = './index.html'
+}
+}
+
+// working with button 4
+document.querySelector(".optionBtn4").onclick = function(){
+    console.log('Btn 4 success!')
+if(currentQuestion.innerHTML == question1.Qtitle){
+    alert("correct!")
+    currentQuestion.innerHTML = question2.Qtitle
+    btn1.innerHTML = question2.optionA
+    bnt2.innerHTML = question2.optionB
+    bnt3.innerHTML = question2.optionC
+    bnt4.innerHTML = question2.optionD
+}
+else if(currentQuestion.innerHTML == question2.Qtitle){
+    alert("correct!")
+    currentQuestion.innerHTML = question3.Qtitle
+    btn1.innerHTML = question3.optionA
+    bnt2.innerHTML = question3.optionB
+    bnt3.innerHTML = question3.optionC
+    bnt4.innerHTML = question3.optionD
+}
+else if(currentQuestion.innerHTML == question3.Qtitle){
+    alert("correct!")
+    currentQuestion.innerHTML = question4.Qtitle
+    btn1.innterHTML = question4.optionA
+    bnt2.innerHTML = question4.optionB
+    bnt3.innerHTML = question4.optionC
+    bnt4.innerHTML = question4.optionD
+}
+else if(currentQuestion.innerHTML == question4.Qtitle){
+    alert("correct!")
+    alert("All done!")
+    window.location.href = './index.html'
+}
+}
+
+// Setting up the timer
+
+
+    </script>
+</body>
+</html>

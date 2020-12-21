@@ -5,66 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="./assets/style.css" />
 <body>
+  <!-- tittle and timer go here  -->
   <nav>  
-    <h4 class="time" style= "float:right;"></h4>
+    <h4 class="time"></h4>
     <header>
       <h1 style = "color:Red; text-align: center;">Quiz Time</h1>
     </header>
   </nav>
+  <!-- First Page, are you ready  -->
+  <div class="card" id= "ready"> 
+    <p> Are you ready for some riddles? </p> 
+    <button class="readybtn"> Ready</button>
+  </div>
 
-  <div class="wrapper" style="margin-left: 500px;">
+  <!-- Second Page  -->
+  <!-- questions goes here  -->
+  
+  <div class="wrapper" style="margin-left: 500px;margin-right:500px;">
     
-    <div class="card" id="main">
+    <div class="card" id="main" >
       <div class="card-header">
-        <h2>get your brain on</h2>
-      </div>
-       
-      <div class="card-body">
-        
         <h2 class="questionText" id="question_title ">
-          helloquestion 
         </h2>
-        <ol>
-          <li>
-            <button class="optionBtn1" id="optonBtn1">
-              banana
-            </button>
-          </li>
-          <li>
-                  <button class="optionBtn2" id="optonBtn2">
-                      apple
-              </button>
-          </li>
-          <li>
-                  <button class="optionBtn3" id="optonBtn3">
-                      cherry
-              </button>
-          </li>
-          <li>
-                  <button class="optionBtn4" id="optonBtn4">
-                      sushi
-              </button>
-          </li>
-        </ol>
-          
+      </div>
+
+      <div class="card-body">
+        <li>
+          <button class="optionBtn1" id="optionBtn">
+            as1a
+          </button>
+        </li>
+        <br/>
+        <li>
+          <button class="optionBtn2" id="optionBtn">
+            as1b
+          </button>
+        </li>
+        <br/>
+        <li>
+          <button class="optionBtn3" id="optionBtn">
+            as1c
+          </button>
+        </li>
+        <br/>
+        <li>
+          <button class="optionBtn4" id="optionBtn">
+            as1d
+          </button>
+        </li>
+      </div>
+      <hr/>
+      <div class="card-footer"> 
+        result 
       </div>
      
     </div>
+  
   </div>
 
 
 
-  <h1>High Score Records</h1>
+<!-- high school record go here  -->
+  <!-- <h1>High Score Records</h1>
 
-    <!-- Input Form -->
+    Input Form -->
     <form>
       <span id="highScore">Name and High Score <input id="highScore" type="text" ><input id="add-highScore" value="Add Score" type="submit"></span>
     </form>
     <hr>
-    <!-- To-Do List -->
+
+
+
+    <h1>High Score Records</h1>
+    <form >
+      <input placeholder="name" id="name" />
+      <input placeholder="score" id="score" />
+      <button id="submit">Submit</button>
+      <div>
+        <h4 id="response"></h4>
+      </div>
+    </form>
+
     <div id="hS">
     </div>
+
 
 
     <script type="text/javascript" src="./assets/script.js"> </script>

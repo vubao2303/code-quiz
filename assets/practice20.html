@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="row">
+                <div class="column">
+                    High Scores
+                </div>
+                <div class="column - 9">
+
+                </div>
+                <div class="column">
+                    <h3>
+                        Time Left:
+                    </h3>
+                    <p class="seconds">
+
+                    </p>
+                </div>
+            </div>
+        </nav>
+    </header>
+   <main>
+    <h2 class="questionText" id="question_title ">
+        
+    </h2>
+        <ol>
+            <li>
+                    <button class="optionBtn1" id="optonBtn1">
+                        Javascript
+                </button>
+            </li>
+            <li>
+                    <button class="optionBtn2" id="optonBtn2">
+                        Html
+                </button>
+            </li>
+            <li>
+                    <button class="optionBtn3" id="optonBtn3">
+                        css
+                </button>
+            </li>
+            <li>
+                    <button class="optionBtn4" id="optonBtn4">
+                        All of the above
+                </button>
+            </li>
+        </ol>
+    </main>
+    <script>
+    var alltheQs = {
+    question1: "this is q1",
+    question2: "this is q2",
+    question3: "this is q3",
+    question4: "this is question4"
+    }
+
+var btn1 = document.querySelector(".optionBtn1")
+var btn2 =  document.querySelector(".optionBtn2")
+var btn3 = document.querySelector(".optionBtn3")
+var btn4 = document.querySelector(".optionBtn4") 
+var currentQuestion = document.querySelector(".questionText");   
+
+var changeq2= function changeanswer2() {
+    btn1.textContent = "as2a";
+  btn2.textContent = "as2b";
+  btn3.textContent = "as2c";
+  btn4.textContent = "as2d";
+}
+var changeq3= function changeanswer3 () {
+    btn1.textContent = "as3a",
+  btn2.textContent = "as3b",
+  btn3.textContent = "as3c",
+  btn4.textContent = "as3d"
+}
+
+var changeq4 = function changeanswer4 () {
+    btn1.textContent = "as4a",
+  btn2.textContent = "as4b",
+  btn3.textContent = "as4c",
+  btn4.textContent = "as4d"
+
+}
+
+document.querySelector(".questionText").innerHTML = alltheQs.question1
+
+// working with button 1 
+document.querySelector(".optionBtn1").onclick = function(){
+    console.log('button1 A is the correct answer')
+if(currentQuestion.innerHTML == alltheQs.question1){
+    alert("correct!")
+    currentQuestion.innerHTML = alltheQs.question2
+    changeq2 ()
+}
+else if(currentQuestion.innerHTML == alltheQs.question2){
+    alert("incorrect!")
+    currentQuestion.innerHTML = alltheQs.question3
+    changeq3 ()
+}
+else if(currentQuestion.innerHTML ==  alltheQs.question3){
+    alert("incorrect!")
+    currentQuestion.innerHTML =  alltheQs.question4
+    changeq4 ()
+}
+else if(currentQuestion.innerHTML ==  alltheQs.question4){
+    alert("incorrect!")
+    alert("All done!")
+    window.location.href = './index.html'
+}
+}
+
+// working on button 2
+document.querySelector(".optionBtn2").onclick = function(){
+    console.log('button2 B is the correct answer')
+    if(currentQuestion.innerHTML == alltheQs.question1){
+    alert("incorrect!")
+    currentQuestion.innerHTML = alltheQs.question2
+    changeq2 ()
+}
+else if(currentQuestion.innerHTML == alltheQs.question2){
+    alert("correct!")
+    currentQuestion.innerHTML =  alltheQs.question3
+    changeq3 ()
+}
+else if(currentQuestion.innerHTML ==  alltheQs.question3){
+    alert("incorrect!")
+    currentQuestion.innerHTML =  alltheQs.question4
+    changeq4 ()
+}
+else if(currentQuestion.innerHTML == alltheQs.question4){
+    alert("incorrect!")
+    alert("All done!")
+    window.location.href = './index.html'
+}
+}
+
+
+// working with button 3
+document.querySelector(".optionBtn3").onclick = function(){
+    console.log('button3 C is the correct answer')
+    if(currentQuestion.innerHTML == alltheQs.question1){
+    alert("incorrect!")
+    currentQuestion.innerHTML =alltheQs.question2
+    changeq2 ()
+    
+}
+else if(currentQuestion.innerHTML == alltheQs.question2){
+    alert("incorrect!")
+    currentQuestion.innerHTML = alltheQs.question3
+    changeq3 ()
+}
+else if(currentQuestion.innerHTML ==  alltheQs.question3){
+    alert("correct!")
+    currentQuestion.innerHTML =  alltheQs.question4
+    changeq4 ()
+}
+else if(currentQuestion.innerHTML ==  alltheQs.question4){
+    alert("incorrect!")
+    alert("All done!")
+    window.location.href = './index.html'
+}
+}
+
+// working with button 4
+document.querySelector(".optionBtn4").onclick = function(){
+    console.log('Btn 4 success!')
+if(currentQuestion.innerHTML == alltheQs.question1){
+    alert('button4 D is the correct answer')
+    currentQuestion.innerHTML = alltheQs.question2
+    changeq2 ()
+}
+else if(currentQuestion.innerHTML == alltheQs.question2){
+    alert("correct!")
+    currentQuestion.innerHTML =  alltheQs.question3
+    changeq3 ()
+}
+else if(currentQuestion.innerHTML ==  alltheQs.question3){
+    alert("correct!")
+    currentQuestion.innerHTML = alltheQs.question4
+    changeq4 ()
+}
+else if(currentQuestion.innerHTML ==  alltheQs.question4){
+    alert("correct!")
+    alert("All done!")
+    window.location.href = './index.html'
+}
+}
+
+// Setting up the timer
+
+
+    </script>
+</body>
+</html>
