@@ -18,47 +18,6 @@ function sendMessage() {
 }
 setTime();
 
-// questions to fill in 
-// // question 1  correct 1
-// // "A box without hinges, key, or lid, yet golden treasure inside is hid."
-//     a. an egg 
-// // b. the Sun 
-// // c. the Moon
-// // d. a treasure box 
-
-
-// Quesion2  answer b
-// // This thing all things devours:
-// // Birds, beasts, trees, flowers;
-// // Gnaws iron, bites steel;
-// // Grinds hard stones to meal;
-// // Slays king, ruins town,
-// // And beats high mountain down.
-// a. a clock  b. time c. a stopwatch d. tree 
-
-
-// question3 answer C
-// Alive without breath,
-// As cold as death;
-// Never thirsty, ever drinking,
-// All in mail never clinking.
-// a.Leaves b. wind c. Fish d. water 
-
-// // question4 answer a 
-// What has roots as nobody sees,
-// Is taller than trees,
-// Up, up it goes,
-// And yet never grows?
-// a. A mountain b. a river c.an ocean d. a rock 
-
-// // question 5 anwer c
-// Thirty white horses on a red hill,
-// First they champ,
-// Then they stamp,
-// Then they stand still.
-// a. aspen trees b. herd of horses c. teeth d. cows 
-
-
 
 // bonusquestion (score  dont get deducted) Where are all these riddles come from? 
 // a. Lord of the Ring b. the Hobbit c A Wizard of Earthsea d. Sorcerer to The Crown 
@@ -102,8 +61,10 @@ btn4.textContent = "as4d"
 
 }
 
-currentQuestion= alltheQs.question1
-
+var currentQuestion= alltheQs.question1
+var q = document.getElementById("question-title")
+q.innerHTML = currentQuestion
+console.log(q)
 // working with button 1 
 // btn1.addEventListener("click", function () {
 //   changeq2();
@@ -135,6 +96,7 @@ else if(currentQuestion==  alltheQs.question4){
 // working on button 2
 btn2.addEventListener("click", function (){
   console.log('button2 B is the correct answer')
+  
   if(currentQuestion== alltheQs.question1){
   alert("incorrect!")
   currentQuestion= alltheQs.question2
@@ -163,21 +125,21 @@ btn3.addEventListener("click", function (){
   console.log('button3 C is the correct answer')
   if(currentQuestion== alltheQs.question1){
   alert("incorrect!")
-  currentQuestion.innerHTML =alltheQs.question2
+  currentQuestion=alltheQs.question2
   changeq2 ()
   
 }
-else if(currentQuestion.innerHTML == alltheQs.question2){
+else if(currentQuestion == alltheQs.question2){
   alert("incorrect!")
-  currentQuestion.innerHTML = alltheQs.question3
+  currentQuestion= alltheQs.question3
   changeq3 ()
 }
-else if(currentQuestion.innerHTML ==  alltheQs.question3){
+else if(currentQuestion ==  alltheQs.question3){
   alert("correct!")
-  currentQuestion.innerHTML =  alltheQs.question4
+  currentQuestion =  alltheQs.question4
   changeq4 ()
 }
-else if(currentQuestion.innerHTML ==  alltheQs.question4){
+else if(currentQuestion ==  alltheQs.question4){
   alert("incorrect!")
   alert("All done!")
   window.location.href = './index.html'
@@ -187,22 +149,22 @@ else if(currentQuestion.innerHTML ==  alltheQs.question4){
 // working with button 4
 btn4.addEventListener("click", function (){
   console.log('btn 4 D is the correct answer')
-if(currentQuestion.innerHTML == alltheQs.question1){
+if(currentQuestion== alltheQs.question1){
   alert('button4 D is the correct answer')
-  currentQuestion.innerHTML = alltheQs.question2
+  currentQuestion= alltheQs.question2
   changeq2 ()
 }
-else if(currentQuestion.innerHTML == alltheQs.question2){
+else if(currentQuestion == alltheQs.question2){
   alert("correct!")
-  currentQuestion.innerHTML =  alltheQs.question3
+  currentQuestion =  alltheQs.question3
   changeq3 ()
 }
-else if(currentQuestion.innerHTML ==  alltheQs.question3){
+else if(currentQuestion ==  alltheQs.question3){
   alert("correct!")
-  currentQuestion.innerHTML = alltheQs.question4
+  currentQuestion = alltheQs.question4
   changeq4 ()
 }
-else if(currentQuestion.innerHTML ==  alltheQs.question4){
+else if(currentQuestion==  alltheQs.question4){
   alert("correct!")
   alert("All done!")
   window.location.href = './index.html'

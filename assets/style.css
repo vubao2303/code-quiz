@@ -14,3 +14,7 @@ button {
     margin-top: 20 rem;
     margin-left: 2 rem;
 }
+
+.card{
+    word-wrap: break-word;
+  }
