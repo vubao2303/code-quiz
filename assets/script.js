@@ -102,68 +102,66 @@ btn4.textContent = "as4d"
 
 }
 
-document.querySelector(".questionText").innerHTML = alltheQs.question1
+currentQuestion= alltheQs.question1
 
 // working with button 1 
 // btn1.addEventListener("click", function () {
 //   changeq2();
 // });
 
-btn1.addEventListener("click", function () {result.textContent ="correct"});
-
-btn1.onclick = function(){
+btn1.addEventListener("click", function (){
   console.log('button1 A is the correct answer')
-if(currentQuestion.innerHTML == alltheQs.question1){
-  currentQuestion.innerHTML = alltheQs.question2
+if(currentQuestion == alltheQs.question1){
+  currentQuestion= alltheQs.question2
   changeq2 ()
 }
-else if(currentQuestion.innerHTML == alltheQs.question2){
+else if(currentQuestion== alltheQs.question2){
   alert("incorrect!")
-  currentQuestion.innerHTML = alltheQs.question3
+  currentQuestion= alltheQs.question3
   changeq3 ()
 }
-else if(currentQuestion.innerHTML ==  alltheQs.question3){
+else if(currentQuestion==  alltheQs.question3){
   alert("incorrect!")
-  currentQuestion.innerHTML =  alltheQs.question4
+  currentQuestion=  alltheQs.question4
   changeq4 ()
 }
-else if(currentQuestion.innerHTML ==  alltheQs.question4){
+else if(currentQuestion==  alltheQs.question4){
   alert("incorrect!")
   alert("All done!")
   window.location.href = './index.html'
 }
-}
+});
 
 // working on button 2
-btn2.onclick = function(){
+btn2.addEventListener("click", function (){
   console.log('button2 B is the correct answer')
-  if(currentQuestion.innerHTML == alltheQs.question1){
+  if(currentQuestion== alltheQs.question1){
   alert("incorrect!")
-  currentQuestion.innerHTML = alltheQs.question2
+  currentQuestion= alltheQs.question2
   changeq2 ()
 }
-else if(currentQuestion.innerHTML == alltheQs.question2){
+else if(currentQuestion== alltheQs.question2){
   alert("correct!")
-  currentQuestion.innerHTML =  alltheQs.question3
+  currentQuestion=  alltheQs.question3
   changeq3 ()
 }
-else if(currentQuestion.innerHTML ==  alltheQs.question3){
+else if(currentQuestion==  alltheQs.question3){
   alert("incorrect!")
-  currentQuestion.innerHTML =  alltheQs.question4
+  currentQuestion=  alltheQs.question4
   changeq4 ()
 }
-else if(currentQuestion.innerHTML == alltheQs.question4){
+else if(currentQuestion== alltheQs.question4){
   alert("incorrect!")
   alert("All done!")
   window.location.href = './index.html'
 }
-}
+});
 
 
 // working with button 3
-bt3.onclick = function(){
+btn3.addEventListener("click", function (){
   console.log('button3 C is the correct answer')
-  if(currentQuestion.innerHTML == alltheQs.question1){
+  if(currentQuestion== alltheQs.question1){
   alert("incorrect!")
   currentQuestion.innerHTML =alltheQs.question2
   changeq2 ()
@@ -184,10 +182,10 @@ else if(currentQuestion.innerHTML ==  alltheQs.question4){
   alert("All done!")
   window.location.href = './index.html'
 }
-}
+});
 
 // working with button 4
-btn4.onclick = function(){
+btn4.addEventListener("click", function (){
   console.log('btn 4 D is the correct answer')
 if(currentQuestion.innerHTML == alltheQs.question1){
   alert('button4 D is the correct answer')
@@ -209,7 +207,7 @@ else if(currentQuestion.innerHTML ==  alltheQs.question4){
   alert("All done!")
   window.location.href = './index.html'
 }
-}
+});
 
 // save name and new high score
 
