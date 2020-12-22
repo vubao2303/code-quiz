@@ -25,15 +25,16 @@
   <!-- Second Page  -->
   <!-- questions go here  -->
   
-  <section class="wrapper" style="margin-left: 350px;margin-right:350px;">
+  <section class="wrapper" style="margin-left: 350px;margin-right:350px;display:none;">
     
-    <div class="card" class="hide" >
+    <div class="card" >
       <div class="card-header">
+        <!-- question -->
         <h2 class="questionText" id="question_title">
           A box without hinges, key, or lid, yet golden treasure inside is hid.
         </h2>
       </div>
-
+      <!-- answers -->
       <div class="card-body">
         <ol>
         <li>
@@ -60,34 +61,47 @@
     </div>
   </section>
 
-
-
-<!-- Third Page for High Score Input   -->
-  <!-- <h1>High Score Records</h1>
-    <div class="hide"  id="HighScoreInPut">
-    <form>
-      <span id="highScore">Name and High Score <input id="highScore" type="text" ><input id="add-highScore" value="Add Score" type="submit"></span>
-    </form>
-    <hr>
-
-
-
-    <h1>High Score Records</h1>
-    <form >
-      <input placeholder="name" id="name" />
-      <input placeholder="score" id="score" />
-      <button id="submit">Submit</button>
-      <div>
-        <h4 id="response"></h4>
-      </div>
-    </form>
-
-    <div id="hS">
+ <!-- Third Page for High Score Input   -->
+ <section class="wrapper" style="margin-left: 350px;margin-right:350px;display: none;">
+  <div class="card">
+    <div class= "card-hearder"> 
+      <h1>All Done!</h1>
     </div>
+    <div class="card-body">
+      <!-- your score is!!!  -->
+      <div class="announce"> </div>
+      <!-- user input score and initials  -->
+      <div id="HighScoreInPut">
+        <form>
+          <span id="highScore">Enter Initials <input id="initials" type="text" >
+            <input id="add-highScore" value="submit" type="submit"></span>
+        </form>
+      </div>
+    </div>
+    <hr/>
+    <div class="card-footer">
+    </div>
+  </div>
+</section>
 
-</div>
 
 <!-- Last Page to keep high score records  -->
+<section class="wrapper" style="margin-left: 350px;margin-right:350px;display:none;">
+  <div class="card">
+    <div class= "card-hearder"> 
+      <h1>Highscores</h1>
+    </div>
+    <div class="card-content">
+      <!-- this is where createElementlist come in  -->
+      <!-- also create element button, one to go back and one to clear -->
+      <input type="text" id="comment" name="comment" value="I'm a text field">
+    </div>
+    
+
+  </div>
+
+
+</section>
 
     <script type="text/javascript" src="./assets/script.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

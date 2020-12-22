@@ -38,18 +38,20 @@ setTime();
 var eventType = document.querySelector("#event-type"); 
 var questionsInCard = document.querySelector(".wrapper");
 var intro=document.querySelector("#ready");
-var startbtn =document.querySelector(".readdybtn")
+var startbtn =document.querySelector(".readybtn")
 var introvalue = intro.style.display;
+var score = document.querySelector("#score")
 function show (){
-if (introvalue=='block') {
-  intro.style.display='none';
-  starbtn.innerHTML="show card";
-  
+  intro.style.display="none";
+  questionsInCard.style.display= "block";
 }
-else {
-  into.style.dislay="block";
-  startbtn.innerHTML ='hide card';
-}
+startbtn.addEventListener("click", show)
+
+// 
+function showscore (){
+  questionsInCard.style.display="none";
+  score.style.display= "block";
+  console.log ("show score")
 }
 
 
@@ -127,7 +129,6 @@ btn1.addEventListener("click", function (){
 if(currentQuestion == alltheQs.question1){
   currentQuestion= alltheQs.question2
   changeq2 ()
-  
 }
 else if(currentQuestion== alltheQs.question2){
   result.textContent = "Incorrect"
@@ -146,8 +147,7 @@ else if(currentQuestion==  alltheQs.question4){
 }
 else if(currentQuestion==  alltheQs.question5){
   result.textContent = "Incorrect"
-  // alert("All done!")
-  window.location.href = './index.html'
+    showscore ();
 }
 });
 
@@ -176,9 +176,8 @@ else if(currentQuestion==  alltheQs.question4){
   changeq5 ()
 }
 else if(currentQuestion==  alltheQs.question5){
-  result.textContent = "Correct"
-  // alert("All done!")
-  window.location.href = './index.html'
+  result.textContent = "Incorrect"
+    showscore ();
 }
 });
 
@@ -209,14 +208,12 @@ else if(currentQuestion==  alltheQs.question4){
 }
 else if(currentQuestion==  alltheQs.question5){
   result.textContent = "Incorrect"
-  // alert("All done!")
-  window.location.href = './index.html'
+    showscore ();
 }
 });
 
 // working with button 4
 btn4.addEventListener("click", function (){
-  console.log('btn 4 D is the correct answer')
 if(currentQuestion== alltheQs.question1){
   result.textContent = "Incorrect"
   currentQuestion= alltheQs.question2
@@ -239,8 +236,7 @@ else if(currentQuestion==  alltheQs.question4){
 }
 else if(currentQuestion==  alltheQs.question5){
   result.textContent = "Incorrect"
-  // alert("All done!")
-  window.location.href = './index.html'
+    showscore ();
 }
 });
 
