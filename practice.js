@@ -1410,3 +1410,110 @@ var changeq1 = function changeanswer1 () {
   btn3.textContent = "teeth",
   btn4.textContent = "cows"
   }
+
+  if result = incorrect) function nextquestion () {
+    changeq2 (), 
+  
+  )
+  var nextquestion = function next () {
+    changeq2 ();
+    changeq3 ();
+  }
+  onclick="changeq2();changeq3();changeq4();changeq5()" 
+
+//   <p>Click the "Try it" button to toggle between hiding and showing the DIV element:</p>
+
+// <button onclick="myFunction()">Try it</button>
+
+// <div id="myDIV">
+// This is my DIV element.
+// </div>
+
+// <p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
+
+// <script>
+// function myFunction() {
+//   var x = document.getElementById("myDIV");
+//   if (x.style.display === "none") {
+//     x.style.display = "block";
+//   } else {
+//     x.style.display = "none";
+//   }
+// }
+// </script>
+
+var eventType = document.querySelector("#event-type"); 
+var questionsInCard = document.querySelector(".wrapper");
+var intro=document.querySelector("#ready");
+var startbtn =document.querySelector(".readdybtn")
+var introvalue = intro.style.display;
+function show (){
+if (introvalue=='block') {
+  intro.style.display='none';
+  starbtn.innerHTML="show card";
+  
+}
+
+else {
+  into.style.dislay="block";
+  startbtn.innerHTML ='hide card';}
+}
+
+  }
+if (intro=='ready')
+
+
+else 
+
+var eventType = document.querySelector("#event-type"); 
+var mouseEventsEl = document.querySelector("#click-events");
+var keyEventsEl = document.querySelector("#key-events");
+
+function toggleDisplay(event) {
+
+  console.log(event.target);
+  console.log("Value : " , event.target.value);
+  
+  var value = event.target.value;
+  if(value === "keydown") {
+    mouseEventsEl.classList.add("hide");
+    keyEventsEl.classList.remove("hide");
+  }
+  else {
+    mouseEventsEl.classList.remove("hide");
+    keyEventsEl.classList.add("hide");
+  }
+}
+eventType.addEventListener("change", toggleDisplay);
+
+
+
+
+startbtn.addEventListener("click", function () {
+
+  console.log(event.target);
+  console.log("Value : " , event.target.value);
+  
+  var value = event.target.value;
+  if(value === "keydown") {
+    questionsInCard.classList.add("hide");
+    intro.classList.remove("hide");
+  }
+  else {
+    questionsInCard.classList.remove("hide");
+    intro.classList.add("hide");
+  }
+}
+eventType.addEventListener("change", toggleDisplay);
+
+
+
+var intro=document.querySelector("#ready") 
+
+var questionsInCard = document.querySelector(".wrapper");
+var startbtn =document.querySelector(".readdybtn")
+startbtn.addEventListener("click", function ()
+
+
+
+<button class="readybtn" > START </button>

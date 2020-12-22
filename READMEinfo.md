@@ -15,27 +15,19 @@ SO THAT I can gauge my progress compared to my peers
 ```
 GIVEN I am taking a code quiz
 * Create a html file, a css file, and a javascript file
+* Give a timer of 100 seconds on the clock 
 * In HTML file 
 <ul> 
-<li> create nav bar with title and a clock on top of the page 
+<li> create nav bar with title and a clock on top of the page </li>
 <li>create a page with quiz rules and a start button </li>
 <li>create a page with question and answer choices </li>
 <li>create a page that allow name and high score  input </li>
 <li>create a page that save highscore record </li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+</ul>
 
 WHEN I click the start button
+* Name a var for pointers to operate on functions 
+* 
 THEN a timer starts and I am presented with a question
 WHEN I answer a question
 THEN I am presented with another question

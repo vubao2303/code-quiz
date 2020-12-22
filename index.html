@@ -8,24 +8,26 @@
 <link rel="stylesheet" href="./assets/style.css" />
 <body>
   <!-- tittle and timer go here  -->
-  <nav>  
+  <section>
+    <nav>  
     <h4 class="time"></h4>
     <header>
       <h1 style = "color:Red; text-align: center;">Quiz Time</h1>
     </header>
-  </nav>
-  <!-- First Page, are you ready  -->
-  <div class="card" id= "ready" > 
-    <h2> Are you ready for some riddles? Becareful with your choices, wrong answer will deduct 10 seconds off the clock</h2> 
+    </nav>
+    <!-- First Page, Are you ready  -->
+    <div class="card" id= "ready" > 
+    <h2> Are you ready for some riddles? Becareful with your choices, wrong answer will deduct 10 seconds off the clock. Your score will be the left over time you have on the clock</h2> 
     <button class="readybtn" > START </button>
-  </div>
+   </div>
+  </section>
 
   <!-- Second Page  -->
-  <!-- questions goes here  -->
+  <!-- questions go here  -->
   
-  <div class="wrapper" style="margin-left: 350px;margin-right:350px;">
+  <section class="wrapper" style="margin-left: 350px;margin-right:350px;">
     
-    <div class="card" id="main" >
+    <div class="card" class="hide" >
       <div class="card-header">
         <h2 class="questionText" id="question_title">
           A box without hinges, key, or lid, yet golden treasure inside is hid.
@@ -35,46 +37,34 @@
       <div class="card-body">
         <ol>
         <li>
-          <button class="optionBtn1" id="optionBtn">An Egg
-            
-          </button>
+          <button class="optionBtn1" id="optionBtn">An Egg</button>
         </li>
         <br/>
         <li>
-          <button class="optionBtn2" id="optionBtn">
-            The Sun
-          </button>
+          <button class="optionBtn2" id="optionBtn">The Sun</button>
         </li>
         <br/>
         <li>
-          <button class="optionBtn3" id="optionBtn">
-            The Moon
-          </button>
+          <button class="optionBtn3" id="optionBtn">The Moon</button>
         </li>
         <br/>
         <li>
-          <button class="optionBtn4" id="optionBtn">
-            A Tresure Box
-          </button>
+          <button class="optionBtn4" id="optionBtn">A Tresure Box</button>
         </li>
         </ol>
       </div>
-      
       <hr/>
-      <div class="card-footer"> 
-         
+      <div class="card-footer">  
       </div>
      
     </div>
-  
-  </div>
+  </section>
 
 
 
-<!-- high school record go here  -->
+<!-- Third Page for High Score Input   -->
   <!-- <h1>High Score Records</h1>
-
-    Input Form -->
+    <div class="hide"  id="HighScoreInPut">
     <form>
       <span id="highScore">Name and High Score <input id="highScore" type="text" ><input id="add-highScore" value="Add Score" type="submit"></span>
     </form>
@@ -95,7 +85,9 @@
     <div id="hS">
     </div>
 
+</div>
 
+<!-- Last Page to keep high score records  -->
 
     <script type="text/javascript" src="./assets/script.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

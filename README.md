@@ -22,34 +22,79 @@
 
 [License](#License)
 
-Psuedo Code 
-//GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
-
-quiz info 
-What does IPA stand for? anwser 1-2-3-4 
-Who painted the Mona Lisa?answer 1-2-3-4
-Which planet is closest to the sun? 1-2-3-4
-
-
-
 
 ## Description of Page Building 
+* Create a html file, a css file, and a javascript file
+* In HTML file 
+    <ol> 
+    <li>Create nav bar with title and a clock on top of the page, give a timer of 100 seconds on the clock  </li>
+    <li>Putting content in card using bootstraps for orgnized structures
+    <li>Create a page with quiz rules and a start button. Quiz rules: Incorrect answer will deduct 10 seconds off the clock and the final score is the time left on the clock </li>
+    <li>Create a page with question and answer choices</li>
+    <li>Create a page that allow name and high score  input </li>
+    <li>Create a page that save highscore record </li>
+    </ol>
+* In Javascript file 
+    <ol> 
+    <li> Name variables as pointer for functions. Use querySelector to traverse the Dom and apoint the elements 
+    <li> Set timer for the clock countdown using setInterval function 
+    <li> Use eventListener function for user input button choices
+    <li> Apply conditional statements to provide result of user input choices 
+    <li> Save user input and keep record 
+    <li> Start the page again
+    </ol>
+* In Style.Css file 
+    <ol>
+    <li> Color buttons background 
+    <li> Position clock to the left of the page 
+    <li> Choose font and size for headers and body and text 
+    <li> Alignt texts 
+    </ol>
+  
 
 
 
 
 ## Code Snippet
 
+Set timer on the clock for quiz countdown 
+```javascript
+function setTime() {
+  var timerInterval = setInterval(function() {
+    secondsLeft = secondsLeft - 1 ;
+    timeEl.textContent = "Time: " + secondsLeft;
+
+    if(secondsLeft === 0) {
+      clearInterval(timerInterval);
+      sendMessage();
+    }
+  }, 1000);
+}
+```
+Name contents using variables 
+```javascript
+var btn1 = document.querySelector(".optionBtn1")
+var btn2 =  document.querySelector(".optionBtn2")
+var btn3 = document.querySelector(".optionBtn3")
+var btn4 = document.querySelector(".optionBtn4") 
+var currentQuestion = document.querySelector(".questionText");   
+var result =document.querySelector(".card-footer")
+```
+Use addEventListener function to attaches on click event to button element
+```javascript 
+btn1.addEventListener("click", function (){
+  console.log('button1 A is the correct answer')
+  result.textContent = "correct"
+if(currentQuestion == alltheQs.question1){
+  currentQuestion= alltheQs.question2
+  changeq2 ()
+  ```
+Create function to deduct times from incorrect answers 
+```javascript 
+var incorrectAnswer = function() {
+  secondsLeft = secondsLeft - 10
+  }
+```
 
 ## Technologies Used
 - HTML - used to create elements on the DOM
@@ -68,7 +113,7 @@ Which planet is closest to the sun? 1-2-3-4
 
 ## Deployed Link
 
-* [See Live Site](https://vubao2303.github.io/Password-Generator/)
+* [See Live Site](https://vubao2303.github.io/code-quiz/)
 
 
 ## Author
@@ -76,7 +121,7 @@ Which planet is closest to the sun? 1-2-3-4
 * **B Tram Vu** 
 
 - [Link to Portfolio Site](https://github.com/vubao2303)
-- [Link to Github](https://github.com/vubao2303/Password-Generator)
+- [Link to Github](https://github.com/vubao2303/code-quiz)
 - [Link to LinkedIn](https://www.linkedin.com/in/tram-vu-866250121/)
 
 ## License
