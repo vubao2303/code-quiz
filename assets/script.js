@@ -36,11 +36,11 @@ setTime();
 
 // HIDE AND SEEK 
 var eventType = document.querySelector("#event-type"); 
-var questionsInCard = document.querySelector(".wrapper");
+var questionsInCard = document.querySelector("#qincard");
 var intro=document.querySelector("#ready");
 var startbtn =document.querySelector(".readybtn")
 var introvalue = intro.style.display;
-var score = document.querySelector("#score")
+var score = document.querySelector("#scoreincard")
 function show (){
   intro.style.display="none";
   questionsInCard.style.display= "block";
@@ -48,11 +48,12 @@ function show (){
 startbtn.addEventListener("click", show)
 
 // 
-function showscore (){
+function showscore(){
   questionsInCard.style.display="none";
   score.style.display= "block";
   console.log ("show score")
 }
+showscore ()
 
 
 
@@ -147,7 +148,12 @@ else if(currentQuestion==  alltheQs.question4){
 }
 else if(currentQuestion==  alltheQs.question5){
   result.textContent = "Incorrect"
-    showscore ();
+  function showscore(){
+    questionsInCard.style.display="none";
+    score.style.display= "block";
+    console.log ("show score")
+  }
+  showscore ()
 }
 });
 
@@ -177,10 +183,14 @@ else if(currentQuestion==  alltheQs.question4){
 }
 else if(currentQuestion==  alltheQs.question5){
   result.textContent = "Incorrect"
-    showscore ();
+  function showscore(){
+    questionsInCard.style.display="none";
+    score.style.display= "block";
+    console.log ("show score")
+  }
+  showscore ()
 }
 });
-
 
 // working with button 3
 btn3.addEventListener("click", function (){
@@ -208,7 +218,12 @@ else if(currentQuestion==  alltheQs.question4){
 }
 else if(currentQuestion==  alltheQs.question5){
   result.textContent = "Incorrect"
-    showscore ();
+  function showscore(){
+    questionsInCard.style.display="none";
+    score.style.display= "block";
+    console.log ("show score")
+  }
+  showscore ()
 }
 });
 
@@ -236,83 +251,52 @@ else if(currentQuestion==  alltheQs.question4){
 }
 else if(currentQuestion==  alltheQs.question5){
   result.textContent = "Incorrect"
-    showscore ();
+  function showscore(){
+    questionsInCard.style.display="none";
+    score.style.display= "block";
+    console.log ("show score")
+  }
+  showscore ()
 }
 });
+
+// deduct point 
+// var incorrectAnswer = function() {
+//   if (incorrectAnswer=== "Incorrect") {
+//   secondsLeft = secondsLeft - 10
+//   }
+//   }
+
 
 // save name and new high score
 
-function othername() {
-  var input = document.getElementById("userInput").value;
-  alert(input);
-}
+// var intials = document.querySelector.()
 
-var submitEl = document.querySelector("#submit");
-var nameInput = document.querySelector("#name");
-var emailInput = document.querySelector("#score");
-var savescore = document.querySelector("#response");
-
-submitEl.addEventListener("click", function(event) {
-  event.preventDefault();
-
-  console.log(event);
-  
-  var savescoresss = nameInput.value + " "+ emailInput.value;
-  savescore = savescoresss;
-});
-
-//deduct point 
-var incorrectAnswer = function() {
-  if (incorrectAnswer=== "Incorrect") {
-  secondsLeft = secondsLeft - 10
-  }
-  }
-
-  // if ((result==="Correct")||(result==="Incorrect")) function next (){
-  //   onclick="changeq2();changeq3();changeq4();changeq5();" }
-
-  //   // hide and show divs divs in in html but hide funtion using js 
-
-  //   // 
-
-//   var eventType = document.querySelector("#event-type"); 
-// var mouseEventsEl = document.querySelector("#click-events");
-// var keyEventsEl = document.querySelector("#key-events");
-
-// function toggleDisplay(event) {
-
-//   console.log(event.target);
-//   console.log("Value : " , event.target.value);
-  
-//   var value = event.target.value;
-//   if(value === "keydown") {
-//     mouseEventsEl.classList.add("hide");
-//     keyEventsEl.classList.remove("hide");
-//   }
-//   else {
-//     mouseEventsEl.classList.remove("hide");
-//     keyEventsEl.classList.add("hide");
-//   }
+// function othername() {
+//   var input = document.getElementById("userInput").value;
+//   alert(input);
 // }
-// eventType.addEventListener("change", toggleDisplay);
+
+// var submitEl = document.querySelector("#submit");
+// var nameInput = document.querySelector("#name");
+// var emailInput = document.querySelector("#score");
+// var savescore = document.querySelector("#response");
+
+// submitEl.addEventListener("click", function(event) {
+//   event.preventDefault();
+
+//   console.log(event);
+  
+//   var savescoresss = nameInput.value + " "+ emailInput.value;
+//   savescore = savescoresss;
+// });
 
 
 
+//   // putting info in 
+//   var hsInput = document.querySelector  ()
+//   var summitbtn = 
+// .addEventListener("submit", function(event) {
+//     event.preventDefault();
 
-// var questionsInCard = document.querySelector(".wrapper");
-// function 
-// // ?if start button click then show else hide 
-
-// // // write code here 
-
-
-// // var hsInput = document.querySelector("#highscoreInput")
-// // function 
-// // // when funtion alert "Game Over" show else hide 
-
-
-
-// // // view High Score bar 
-
-
-// // When time is up or last quesiton is answered , function high score came 
+//     var 
