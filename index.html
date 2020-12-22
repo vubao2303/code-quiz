@@ -11,13 +11,12 @@
   <section>
     <nav>  
     <h4 class="time"></h4>
-    <header>
-      <h1 style = "color:Red; text-align: center;">Quiz Time</h1>
-    </header>
+    <h4 class="record">View Highscores</h4>
     </nav>
     <!-- First Page, Are you ready  -->
     <div class="card" id= "ready" > 
-    <h2> Are you ready for some riddles? Becareful with your choices, wrong answer will deduct 10 seconds off the clock. Your score will be the left over time you have on the clock</h2> 
+    <h1 style="text-align: center;"> QUIZ TIME</h1>
+    <h2> Are you ready for some riddles? Becareful with your choices, wrong answer will deduct 10 seconds off the clock. Your score will be the left over seconds you have on the clock</h2> 
     <button class="readybtn" > START </button>
    </div>
   </section>
@@ -25,7 +24,7 @@
   <!-- Second Page  -->
   <!-- questions go here  -->
   
-  <section class="wrapper" id="qincard" style="margin-left: 350px;margin-right:350px;">
+  <section class="wrapper" id="qincard" style="margin-left: 350px;margin-right:350px;display:none;">
     
     <div class="card" >
       <div class="card-header">
@@ -63,18 +62,20 @@
 
  <!-- Third Page for High Score Input   -->
  <section class="wrapper" id="scoreincard" style="margin-left: 350px;margin-right:350px;">
-  <div class="card">
+  <div class="card" id="intpage">
     <div class= "card-hearder"> 
       <h1>All Done!</h1>
     </div>
     <div class="card-body">
       <!-- your score is!!!  -->
-      <div class="announce"> </div>
+      <div class="announce"> Your score is </div>
       <!-- user input score and initials  -->
+      <br/>
+
       <div id="HighScoreInPut">
         <form>
-          <span id="highScore">Enter Initials <input id="initials" type="text" >
-            <input id="add-highScore" value="submit" type="submit"></span>
+          <span id="highScore">Enter Initials <input id="initials" type="text" placeholder="initials-scores" >
+             <button class="scorebutton" type="button" > submit </button></span>
         </form>
       </div>
     </div>
@@ -86,13 +87,14 @@
 
 
 <!-- Last Page to keep high score records  -->
-<section class="wrapper" style="margin-left: 350px;margin-right:350px;">
-  <div class="card">
+<section class="wrapper" id="record-page" style="margin-left: 350px;margin-right:350px;">
+  <div class="card" >
     <div class= "card-hearder"> 
       <h1>Highscores</h1>
     </div>
+
     <div class="card-content">
-      <!-- this is where createElementlist come in  -->
+
       <!-- also create element button, one to go back and one to clear -->
       <input type="text" id="comment" name="comment" value="I'm a text field">
     </div>
@@ -102,6 +104,7 @@
 
 
 </section>
+
 
     <script type="text/javascript" src="./assets/script.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

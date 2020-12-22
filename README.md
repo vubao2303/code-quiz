@@ -37,6 +37,7 @@
 * In Javascript file 
     <ol> 
     <li> Name variables as pointer for functions. Use querySelector to traverse the Dom and apoint the elements 
+    <li> Apply hide and show function to display new content only when a function is activate 
     <li> Set timer for the clock countdown using setInterval function 
     <li> Use eventListener function for user input button choices
     <li> Apply conditional statements to provide result of user input choices 

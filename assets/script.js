@@ -1,6 +1,7 @@
 // set timer here! 
 // create pointer for time element 
 var timeEl = document.querySelector(".time");
+var interval;
 // asign the time limit 
 var secondsLeft = 100;
 
@@ -10,7 +11,7 @@ function setTime() {
     timeEl.textContent = "Time: " + secondsLeft;
 
     if(secondsLeft === 0) {
-      clearInterval(timerInterval);
+      clearInterval(interval);
       sendMessage();
     }
   }, 1000);
@@ -19,20 +20,18 @@ function sendMessage() {
     timeEl.textContent = " Time's Up! ";
     // provide place to put in high score 
 }
-setTime();
 
 
-// bonusquestion (score  dont get deducted) Where are all these riddles come from? 
-// a. Lord of the Ring b. the Hobbit c A Wizard of Earthsea d. Sorcerer to The Crown 
+// // deduct point if get the wrong answer 
+function deduct (){
+  secondsLeft = secondsLeft - 10;
+    timeEl.textContent = "Time: " + secondsLeft;
+}
+console.log (secondsLeft)
 
-// intro div
-// var intro=document.querySelector("#ready") 
-// // all the questions are wrapped in card 
-// var questionsInCard = document.querySelector(".wrapper");
-// // when start button is clicked, then quesitions are show and intro get hidden 
-// var startbtn =document.querySelector(".readdybtn")
-
-// startbtn.addEventListener("click", function ()
+function pauseTimer() {
+  clearInterval(interval);
+}
 
 // HIDE AND SEEK 
 var eventType = document.querySelector("#event-type"); 
@@ -41,19 +40,35 @@ var intro=document.querySelector("#ready");
 var startbtn =document.querySelector(".readybtn")
 var introvalue = intro.style.display;
 var score = document.querySelector("#scoreincard")
+var intpage = document.querySelector("#intpage")
+var announce = document.querySelector(".announce")
 function show (){
+  setTime();
   intro.style.display="none";
   questionsInCard.style.display= "block";
 }
 startbtn.addEventListener("click", show)
 
-// 
 function showscore(){
   questionsInCard.style.display="none";
   score.style.display= "block";
+  announce.textContent= "Your score is " + secondsLeft
   console.log ("show score")
+  
 }
-showscore ()
+// 
+var submitbtn=document.querySelector(".scorebutton")
+var recordpage= document.querySelector("#record-page")
+
+
+function showRecord(){
+ score.style.display= "none";
+ recordpage.style.display="block";
+ console.log (recordpage)
+ console.log (score)
+}
+submitbtn.addEventListener("click", showRecord)
+
 
 
 
@@ -123,9 +138,10 @@ btn1.textContent = "The Night King's Army",
 // });
 
 btn1.addEventListener("click", function (){
-  console.log('button1 A is the correct answer')
+  console.log('button1 is the correct answer for question 1 and 4')
   console.log (result)
   console.log (btn1)
+  // 1 is the correct answer for question 1 
   result.textContent = "Correct"
 if(currentQuestion == alltheQs.question1){
   currentQuestion= alltheQs.question2
@@ -134,36 +150,37 @@ if(currentQuestion == alltheQs.question1){
 else if(currentQuestion== alltheQs.question2){
   result.textContent = "Incorrect"
   currentQuestion= alltheQs.question3
+  deduct ()
   changeq3 ()
 }
 else if(currentQuestion==  alltheQs.question3){
   result.textContent = "Incorrect"
   currentQuestion=  alltheQs.question4
+  deduct ()
   changeq4 ()
 }
 else if(currentQuestion==  alltheQs.question4){
-  result.textContent = "Incorrect"
-  currentQuestion=  alltheQs.question4
+  result.textContent = "correct"
+  currentQuestion=  alltheQs.question5
+
   changeq5 ()
 }
 else if(currentQuestion==  alltheQs.question5){
   result.textContent = "Incorrect"
-  function showscore(){
-    questionsInCard.style.display="none";
-    score.style.display= "block";
-    console.log ("show score")
-  }
+  deduct ()
   showscore ()
+  pauseTimer()
 }
 });
 
 // working on button 2
 btn2.addEventListener("click", function (){
-  console.log('button2 B is the correct answer')
+  console.log('button2 is the correct answer for question 2 and 3')
   
   if(currentQuestion== alltheQs.question1){
     result.textContent = "Incorrect"
   currentQuestion= alltheQs.question2
+  deduct ()
   changeq2 ()
 }
 else if(currentQuestion== alltheQs.question2){
@@ -177,126 +194,112 @@ else if(currentQuestion==  alltheQs.question3){
   changeq4 ()
 }
 else if(currentQuestion==  alltheQs.question4){
-  result.textContent = "Correct"
-  currentQuestion=  alltheQs.question4
+  result.textContent = "Incorrect"
+  currentQuestion=  alltheQs.question5
+  deduct ()
   changeq5 ()
 }
 else if(currentQuestion==  alltheQs.question5){
   result.textContent = "Incorrect"
-  function showscore(){
-    questionsInCard.style.display="none";
-    score.style.display= "block";
-    console.log ("show score")
-  }
+  deduct ()
   showscore ()
+  pauseTimer()
 }
 });
 
 // working with button 3
 btn3.addEventListener("click", function (){
-  console.log('button3 C is the correct answer')
+  console.log('button3 is the correct answer for question 5')
   if(currentQuestion== alltheQs.question1){
     result.textContent = "Incorrect"
   currentQuestion=alltheQs.question2
+  deduct ()
   changeq2 ()
   
 }
 else if(currentQuestion == alltheQs.question2){
   result.textContent = "Incorrect"
   currentQuestion= alltheQs.question3
+  deduct ()
   changeq3 ()
 }
 else if(currentQuestion ==  alltheQs.question3){
-  result.textContent = "Correct"
+  result.textContent = "Incorrect"
   currentQuestion =  alltheQs.question4
+  deduct ()
   changeq4 ()
 }
 else if(currentQuestion==  alltheQs.question4){
-  result.textContent = "Correct"
-  currentQuestion=  alltheQs.question4
+  result.textContent = "Incorrect"
+  currentQuestion=  alltheQs.question5
+  deduct ()
   changeq5 ()
 }
 else if(currentQuestion==  alltheQs.question5){
-  result.textContent = "Incorrect"
-  function showscore(){
-    questionsInCard.style.display="none";
-    score.style.display= "block";
-    console.log ("show score")
-  }
+  result.textContent = "correct"
+  deduct ()
   showscore ()
+  pauseTimer()
 }
 });
 
 // working with button 4
 btn4.addEventListener("click", function (){
+  console.log ("button 4 is not the correct answer for any question")
 if(currentQuestion== alltheQs.question1){
   result.textContent = "Incorrect"
   currentQuestion= alltheQs.question2
+  deduct ()
   changeq2 ()
 }
 else if(currentQuestion == alltheQs.question2){
   result.textContent = "Incorrect"
   currentQuestion =  alltheQs.question3
+  deduct ()
   changeq3 ()
 }
 else if(currentQuestion ==  alltheQs.question3){
-  result.textContent = "Correct"
+  result.textContent = "Incorrect"
   currentQuestion = alltheQs.question4
+  deduct ()
   changeq4 ()
 }
+// 4 is the correct answer for question 4
 else if(currentQuestion==  alltheQs.question4){
-  result.textContent = "Correct"
-  currentQuestion=  alltheQs.question4
+  result.textContent = "Incorrect"
+  currentQuestion=  alltheQs.question5
   changeq5 ()
 }
 else if(currentQuestion==  alltheQs.question5){
   result.textContent = "Incorrect"
-  function showscore(){
-    questionsInCard.style.display="none";
-    score.style.display= "block";
-    console.log ("show score")
-  }
+  deduct ()
   showscore ()
+  pauseTimer()
+  // announceScore ()
 }
 });
 
-// deduct point 
-// var incorrectAnswer = function() {
-//   if (incorrectAnswer=== "Incorrect") {
-//   secondsLeft = secondsLeft - 10
-//   }
-//   }
 
 
-// save name and new high score
 
-// var intials = document.querySelector.()
-
-// function othername() {
-//   var input = document.getElementById("userInput").value;
-//   alert(input);
+// // when summit button get click, highscore card content appear, and input got insert in 
+// var recordpage= document.querySelector ("#scoreincard")
+// var submitbtn=document.querySelector ("#add-highScore")
+// function showRecord(){
+//  score.style.display= "none";
+//  recordpage.style.display="block";
 // }
-
-// var submitEl = document.querySelector("#submit");
-// var nameInput = document.querySelector("#name");
-// var emailInput = document.querySelector("#score");
-// var savescore = document.querySelector("#response");
-
-// submitEl.addEventListener("click", function(event) {
-//   event.preventDefault();
-
-//   console.log(event);
-  
-//   var savescoresss = nameInput.value + " "+ emailInput.value;
-//   savescore = savescoresss;
-// });
+// submitbtn.addEventListener("click", showRecord)
 
 
+// // collect input from the initial page 
+// 
 
-//   // putting info in 
-//   var hsInput = document.querySelector  ()
-//   var summitbtn = 
-// .addEventListener("submit", function(event) {
-//     event.preventDefault();
 
-//     var 
+// var record= intInput.value.trim ()
+var intInputEl = document.querySelector("#initials")
+var record= intInputEl.value.trim ()
+function pleasetakeint (event){
+var record= intInputEl.value.trim ();
+console.log (record)
+}
