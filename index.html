@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="./assets/style.css" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
 <body>
   <!-- tittle and timer go here  -->
   <section>
@@ -73,7 +75,7 @@
 
       <div id="HighScoreInPut">
         <form>
-          <span id="highScore">Enter Initials <input id="initials" type="text" placeholder="initials-scores" >
+          <span id="highScore">Enter Initials <input id="initials" type="text" placeholder="initials" >
               <button class="scorebutton" type="button" > submit </button></span>
         </form>
       </div>
@@ -87,16 +89,19 @@
 
 <!-- Last Page to keep high score records  -->
   <section class="wrapper" id="record-page">
-    <div class="card" >
+    <div class="card">
       <div class= "card-hearder" style= "text-align: center;"> 
         <h1>Highscores</h1>
       </div>
-      <div class="card-content">
-        <!-- also create element button, one to go back and one to clear -->
-        <input type="text" id="comment" name="comment">
+      <div class="card-content" id="takeinitials">
+      </div> 
+
+      <div>
         <br/>
-        <button class="goback" id="optionBtn">Go Back</button>
-        <button type="reset" value="Reset">Clear Highscores</button>
+          <input TYPE="button" onClick="history.go(0)" VALUE="Play Again"></input>
+    
+        <!-- <button class="goback" id="optionBtn">Go Back</button> -->
+        <button class="clearHs" type="reset" value="Reset">Clear Highscores</button>
       </div>
     </div>
   </section>

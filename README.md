@@ -1,4 +1,5 @@
 # Code-Quiz
+This quiz challenges users' brains with five riddles. Behind the scence working with the code, it is also a real brain teaser. A timer is set up to to keep record of time and score. When player is ready to play, the start button kicks in and provides the questions. Each wrong answer would take 10 seconds off the clock. When all the questions are answered or when the timer reaches 0 seconds, the game is over and players is presented a page to keep their records. Happy Quizzing! 
 
 ## Site Picture
 ![Site]()
@@ -49,7 +50,8 @@
     <li> Color buttons background 
     <li> Position clock to the left of the page 
     <li> Choose font and size for headers and body and text 
-    <li> Alignt texts 
+    <li> Alignt texts depends on page 
+    <li> Add display style to page including display: none 
     </ol>
   
 
@@ -95,6 +97,14 @@ Create function to deduct times from incorrect answers
 var incorrectAnswer = function() {
   secondsLeft = secondsLeft - 10
   }
+```
+Store record list in local storage 
+```javascript
+function storeinitials() {
+  // Stringify and set "initials" key in localStorage to todos array
+  localStorage.setItem("intitials", JSON.stringify(recordlist));
+}
+var highscorelist = JSON.parse(localStorage.getItem("recordlist"));
 ```
 
 ## Technologies Used

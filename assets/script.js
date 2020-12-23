@@ -46,6 +46,8 @@ var intpage = document.querySelector("#intpage")
 var announce = document.querySelector(".announce")
 var submitbtn=document.querySelector(".scorebutton")
 var recordpage= document.querySelector("#record-page")
+var takeint= document.querySelector("#takeinitials")
+
 
 // hide the intro page and show the questions page 
 function show (){
@@ -64,23 +66,44 @@ function showscore(){
 }
 
 // hide the score input page and show the highscore page 
+var recordlist = document.createElement('ol')
+var intInputEl = document.querySelector("#initials")
+var record = intInputEl.value.trim()
+  
 function showRecord () {
   score.style.display = "none";
   recordpage.style.display = "block";
   console.log(recordpage)
   console.log(score)
-  var intInputEl = document.querySelector("#initials")
   var record = intInputEl.value.trim()
-  console.log("input", record)
-  var comment = document.querySelector("#comment")
-  comment.textContent = record.value
+  console.log(record)
+  recordlist.textContent =record + " - " + secondsLeft
+  console.log ("takeint: " + takeint + secondsLeft)
+  takeint.appendChild(recordlist)
+  window.localStorage.setItem("record",secondsLeft);
 }
 submitbtn.addEventListener("click", showRecord)
 
+
+
+// clear button and go back button 
+var gobackbtn = document.querySelector(".goback")
+var clearbtn = document.querySelector(".clearHs")
+clearbtn.addEventListener("click", function (){
+recordlist.innerHTML="";
+console.log ("working")
+});
+
 function storeinitials() {
   // Stringify and set "initials" key in localStorage to todos array
-  localStorage.setItem("comment", JSON.stringify(record));
+  window.localStorage.setItem(recordlistsecondsLeft);
 }
+var highscorelist = JSON.parse(localStorage.getItem("record"));
+
+
+
+
+
 
 
 // Working with questions 
@@ -290,3 +313,23 @@ else if(currentQuestion==  alltheQs.question5){
 //   // Stringify and set "todos" key in localStorage to todos array
 //   localStorage.setItem(, JSON.stringify(todos));
 // }
+
+
+
+// localStorage.setItem("score", JSON.stringify(score));
+    
+// // get most recent submission
+// var highscorelist = JSON.parse(localStorage.getItem("score"));
+
+
+// // add event listener to go back and clear button 
+// var gobackbtn = document.querySelector(".goback")
+// var clearbtn = document.querySelector(".clearHs")
+
+// gobackbtn.addEventListener("click", function (){
+
+// })
+
+// clearbtn.addEventListener("click", function (){
+//   input.value= ""
+// })
