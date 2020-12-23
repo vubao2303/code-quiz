@@ -23,8 +23,7 @@
 
   <!-- Second Page  -->
   <!-- questions go here  -->
-  
-  <section class="wrapper" id="qincard" style="margin-left: 350px;margin-right:350px;display:none;">
+  <section class="wrapper" id="qincard">
     
     <div class="card" >
       <div class="card-header">
@@ -34,7 +33,7 @@
         </h2>
       </div>
       <!-- answers -->
-      <div class="card-body">
+      <div class="card-body" class="asbtn">
         <ol>
         <li>
           <button class="optionBtn1" id="optionBtn">An Egg</button>
@@ -61,7 +60,7 @@
   </section>
 
  <!-- Third Page for High Score Input   -->
- <section class="wrapper" id="scoreincard" style="margin-left: 350px;margin-right:350px;">
+  <section class="wrapper" id="scoreincard">
   <div class="card" id="intpage">
     <div class= "card-hearder"> 
       <h1>All Done!</h1>
@@ -75,7 +74,7 @@
       <div id="HighScoreInPut">
         <form>
           <span id="highScore">Enter Initials <input id="initials" type="text" placeholder="initials-scores" >
-             <button class="scorebutton" type="button" > submit </button></span>
+              <button class="scorebutton" type="button" > submit </button></span>
         </form>
       </div>
     </div>
@@ -83,30 +82,26 @@
     <div class="card-footer">
     </div>
   </div>
-</section>
+  </section>
 
 
 <!-- Last Page to keep high score records  -->
-<section class="wrapper" id="record-page" style="margin-left: 350px;margin-right:350px;">
-  <div class="card" >
-    <div class= "card-hearder"> 
-      <h1>Highscores</h1>
+  <section class="wrapper" id="record-page">
+    <div class="card" >
+      <div class= "card-hearder" style= "text-align: center;"> 
+        <h1>Highscores</h1>
+      </div>
+      <div class="card-content">
+        <!-- also create element button, one to go back and one to clear -->
+        <input type="text" id="comment" name="comment">
+        <br/>
+        <button class="goback" id="optionBtn">Go Back</button>
+        <button type="reset" value="Reset">Clear Highscores</button>
+      </div>
     </div>
+  </section>
 
-    <div class="card-content">
-
-      <!-- also create element button, one to go back and one to clear -->
-      <input type="text" id="comment" name="comment" value="I'm a text field">
-    </div>
-    
-
-  </div>
-
-
-</section>
-
-
-    <script type="text/javascript" src="./assets/script.js"> </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./assets/script.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>

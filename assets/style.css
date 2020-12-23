@@ -2,9 +2,9 @@
     float: right; 
 }
 
-button {
+.asbtn {
     background-color:lavender;
-    border: none;
+    border:none;
     font-size: medium;
 }
 .card {
@@ -29,4 +29,7 @@ button {
 }
 .wrapper {
     display: none; 
+    margin-right:350px;
+    margin-left: 350px;
 }
+
