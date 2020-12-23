@@ -47,6 +47,7 @@ var announce = document.querySelector(".announce")
 var submitbtn=document.querySelector(".scorebutton")
 var recordpage= document.querySelector("#record-page")
 var takeint= document.querySelector("#takeinitials")
+var subScoreList = document.getElementById("#scoreList");
 
 
 // hide the intro page and show the questions page 
@@ -79,12 +80,15 @@ function showRecord () {
   console.log(record)
   recordlist.textContent =record + " - " + secondsLeft
   console.log ("takeint: " + takeint + secondsLeft)
+  // localStorage 
+  var newScore = document.createElement("li");
+  localStorage.setItem(record,secondsLeft);
+  localStorage.getItem("recordlist") + "--" +localStorage.getItem("score");
+  subScoreList.appendChild(newScore);
   takeint.appendChild(recordlist)
-  window.localStorage.setItem("record",secondsLeft);
 }
 submitbtn.addEventListener("click", showRecord)
-
-
+  
 
 // clear button and go back button 
 var gobackbtn = document.querySelector(".goback")
@@ -99,10 +103,6 @@ function storeinitials() {
   window.localStorage.setItem(recordlistsecondsLeft);
 }
 var highscorelist = JSON.parse(localStorage.getItem("record"));
-
-
-
-
 
 
 

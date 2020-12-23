@@ -1,218 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Quiz Game!</title>
+    
 </head>
 <body>
-  <nav>  
-    <h4 class="time" style= "float:right;"></h4>
-    <header>
-      <h1 style = "color:Red; text-align: center;">Quiz Time</h1>
-    </header>
-  </nav>
-
-  <div class="wrapper" style="margin-left: 500px;">
     
-    <div class="card" id="main">
-      <div class="card-header">
-        <h2>get your brain on</h2>
-      </div>
-      <div class="card-body">
-        
-          <h2 class="questionText" id="question_title ">
-              who are u?
-          </h2>
-              <ol>
-                  <li>
-                          <button class="optionBtn1" id="optonBtn1">
-                              banana
-                      </button>
-                  </li>
-                  <li>
-                          <button class="optionBtn2" id="optonBtn2">
-                              apple
-                      </button>
-                  </li>
-                  <li>
-                          <button class="optionBtn3" id="optonBtn3">
-                              cherry
-                      </button>
-                  </li>
-                  <li>
-                          <button class="optionBtn4" id="optonBtn4">
-                              sushi
-                      </button>
-                  </li>
-              </ol>
-          
-      </div>
-     
-    </div>
-  </div>
+
+    <main class = "container">
+
+        <!-- Create the link to the high scores page -->
+    <div id="goToHighScores" style="float: left; font-size: large; margin:auto;">View High Scores</div>
+
+    <!-- Create the timer that shows in the top right -->
+    <div id = "#timer" style="float: right; font-size: large; margin: auto;">There are: <span id ="#timeRemaining"></span> seconds left</div>
+
+    <br/>
+        <!-- Create the main container where the initial welcome and start button will show -->
+        <section class="container" style="text-align: center;" id="#start-container">
+            <h1 id = "#header">Coding Quiz Challenge</h1>
+            <p id = "#instructions">Try to answer the following questions as quickly as possible. Wrong answers will reduce score by 10, each second elapsed reduces score by 1. User score is time remaining when all questions have been answered</p>
+            <button id = "startGame">Start Quiz</button>
+        </section>
+
+        <!-- Create a second container that can be shown after the start button is clicked to display the questions and answer options-->
+        <section class = "container" style="text-align: center; display: none;" id = "#question-container">
+            <!-- show the question as an h2 -->
+            <h2 >Question</h2>
+            <h3 id="#question">""</h3>
+            <ol id="answerOptions" style = "margin-left: auto; text-align: left;">
+                <li><button id="answerOption1" style = "text-align: left;" value = "1"></button></li>
+                <li><button id="answerOption2" style = "text-align: left;" value = "2"></button></li>
+                <li><button id="answerOption3" style = "text-align: left;" value = "3"></button></li>
+                <li><button id="answerOption4" style = "text-align: left;" value = "4"></button></li>
+            </ol>
+            <hr>
+            <div id="right"></div>
 
 
+        </section>
 
-  <script src="./practice.js"></script>
-   
+        <!-- Create a third container that can be shown at the end of the game to show the score, and allow user to enter initials and save score-->
+
+        <section style="text-align: center; display: none;" id = "#score-container">
+            <!-- show the question as an h2 -->
+            <h2 id="#head">Great Job!</h2>
+            <h4 >Your final score was: <span id="finalScore"></span></h4>
+            <input placeholder="Initials" id = "initialsInput" style="text-align: center;"/>
+            <button id = "submit-initials">Submit</button>
+
     
+
+        </section>
+
+        <!-- Create a fourth container for the high scores list -->
+
+        <section style="text-align: center; display: none;" id="#score-list">
+            <h2>High Scores</h2>
+            <ol id="#scoreList">
+                
+            </ol>
+
+            <button id="goBack" class = "button">Go Back</button>
+            <button id="clear-scores" class = "button">Clear Scores</button>
+        </section>
+
+    </main> 
+    <script src="./practice.js"></script>
 </body>
 </html>
-
-<div class="card" class="hide" >
-  <div class="card-header">
-    <h2>
-      All Done ! 
-    </h2>
-  </div>
-
-  <div class="card-body">
-
-    <ol>
-    <li>
-      <button class="optionBtn1" id="optionBtn">An Egg</button>
-    </li>
-    <br/>
-    <li>
-      <button class="optionBtn2" id="optionBtn">The Sun</button>
-    </li>
-    <br/>
-    <li>
-      <button class="optionBtn3" id="optionBtn">The Moon</button>
-    </li>
-    <br/>
-    <li>
-      <button class="optionBtn4" id="optionBtn">A Tresure Box</button>
-    </li>
-    </ol>
-  </div>
-  <hr/>
-  <div class="card-footer">  
-  </div>
- 
-</div>
-
-<section class= "hide" id= "score" style ="display: none">
-  <div class= "card-hearder"> All Done!</div>
-  <div class="card-body">
-    <div class="announce"> </div>
-    <div id="HighScoreInPut">
-      <form>
-        <span id="highScore">Enter Initials <input id="highScore" type="text" ><input id="add-highScore" value="Add Score" type="submit"></span>
-      </form>
-    </div>
-  </div>
-  <hr/>
-  <div class="card-footer">
-  </div>
-</section>
-
-
-
-<div class="card" class="hide" > 
-  <div class ="card-header" id="score"> 
-  </div>
-  <div class = "card-body">
-    <div 
- </div>
-</section>
-<h1>High Score Records</h1>
-<div id="HighScoreInPut">
-<form>
-  <span id="highScore">Enter  <input id="highScore" type="text" ><input id="add-highScore" value="Add Score" type="submit"></span>
-</form>
-<hr>
-<h1>High Score Records</h1>
-<form >
-  
-  <button id="submit">Submit</button>
-  <div>
-    <h4 id="response"></h4>
-  </div>
-</form>
-
-<div id="hS">
-</div
-<div class="todos">
-  <form id="todo-form" method="POST">
-    <label for="todo-text">Add a Todo:</label>
-    <input type="text" placeholder="What needs to be done?" name="todo-text" id="todo-text" />
-  </form>
-
-  <ul id="todo-list"> push it in here </ul>
-</div>
-
-
-<input class="form-control" type="text" placeholder="Readonly input here..." aria-label="readonly input example" readonly>
-
-<form>
-  <span id="highScore">Enter Initials <input id="highScore" type="text" ><input id="add-highScore" value="submit" type="submit"></span>
-</form>
-
-<ul id="highscorelist"> push it in here </ul>
-var initials= document.querySelector.()
-
-var todoInput = document.querySelector("#todo-text");
-var todoForm = document.querySelector("#todo-form");
-var todoList = document.querySelector("#todo-list");
-var todoCountSpan = document.querySelector("#todo-count");
-
-var todos = ["Learn HTML", "Learn JavaScript"];
-
-renderTodos();
-
-function renderTodos() {
-  // Clear todoList element and update todoCountSpan
-  todoList.innerHTML = "";
-  todoCountSpan.textContent = todos.length;
-
-  // Render a new li for each todo
-  for (var i = 0; i < todos.length; i++) {
-    var todo = todos[i];
-
-    var li = document.createElement("li");
-    li.textContent = todo;
-    li.setAttribute("data-index", i);
-
-    var button = document.createElement("button");
-    button.textContent = "Complete";
-
-    li.appendChild(button);
-    todoList.appendChild(li);
-  }
-}
-
-// When form is submitted...
-todoForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  var todoText = todoInput.value.trim();
-
-  // Return from function early if submitted todoText is blank
-  if (todoText === "") {
-    return;
-  }
-
-  // Add new todoText to todos array, clear the input
-  todos.push(todoText);
-  todoInput.value = "";
-
-  // Re-render the list
-  renderTodos();
-});
-
-// When a element inside of the todoList is clicked...
-todoList.addEventListener("click", function(event) {
-  var element = event.target;
-
-  // If that element is a button...
-  if (element.matches("button") === true) {
-    // Get its data-index value and remove the todo element from the list
-    var index = element.parentElement.getAttribute("data-index");
-    todos.splice(index, 1);
-
-    // Re-render the list
-    renderTodos();
-  }
