@@ -1,5 +1,5 @@
 # Code-Quiz
-This quiz challenges users' brains with five riddles. Behind the scence working with the code, it is also a real brain teaser. A timer is set up to to keep record of time and score. When player is ready to play, the start button kicks in and provides the questions. Each wrong answer would take 10 seconds off the clock. When all the questions are answered or when the timer reaches 0 seconds, the game is over and players is presented a page to keep their records. Happy Quizzing! 
+This quiz challenges users' brains with five riddles. Behind the scence working with the code, it is also a real brain teaser. A timer is set up to keep record of times and scores. When player is ready to play, the start button kicks in and provides the questions. Each wrong answer would take 10 seconds off the clock. When all the questions are answered or when the timer reaches 0 seconds, the game is over and players is presented a page to keep their records. Scores are save in local storage.  Happy Quizzing! 
 
 ## Site Picture
 ![Site](./assets/frontpage.png)

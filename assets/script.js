@@ -47,7 +47,7 @@ var announce = document.querySelector(".announce")
 var submitbtn=document.querySelector(".scorebutton")
 var recordpage= document.querySelector("#record-page")
 var takeint= document.querySelector("#takeinitials")
-var subScoreList = document.getElementById("#scoreList");
+var scoreList = document.getElementById("#scoreList");
 
 
 // hide the intro page and show the questions page 
@@ -81,14 +81,15 @@ function showRecord () {
   recordlist.textContent =record + " - " + secondsLeft
   console.log ("takeint: " + takeint + secondsLeft)
   // localStorage 
-  var newScore = document.createElement("li");
   localStorage.setItem(record,secondsLeft);
   localStorage.getItem("recordlist") + "--" +localStorage.getItem("score");
-  subScoreList.appendChild(newScore);
-  takeint.appendChild(recordlist)
+  takeint.appendChild(recordlist);
+  showScore ()
 }
 submitbtn.addEventListener("click", showRecord)
-  
+function showScores () {
+scorelist.setAttribute("style", "text-align: center; display: float;");
+}
 
 // clear button and go back button 
 var gobackbtn = document.querySelector(".goback")
@@ -308,28 +309,3 @@ else if(currentQuestion==  alltheQs.question5){
 }
 });
 
-
-// function storeinitials() {
-//   // Stringify and set "todos" key in localStorage to todos array
-//   localStorage.setItem(, JSON.stringify(todos));
-// }
-
-
-
-// localStorage.setItem("score", JSON.stringify(score));
-    
-// // get most recent submission
-// var highscorelist = JSON.parse(localStorage.getItem("score"));
-
-
-// // add event listener to go back and clear button 
-// var gobackbtn = document.querySelector(".goback")
-// var clearbtn = document.querySelector(".clearHs")
-
-// gobackbtn.addEventListener("click", function (){
-
-// })
-
-// clearbtn.addEventListener("click", function (){
-//   input.value= ""
-// })
